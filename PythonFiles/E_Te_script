@@ -1,0 +1,46 @@
+set term pdfcairo
+set output ("output.pdf")
+set xl 'temperature, K'
+set yl 'energy, eV'
+
+ 
+ 
+
+
+# Make a guess for
+
+a = 0.05
+b = 0.05
+c = 0.05
+d = 0.05
+
+#Define a new function to restrict the fiting parameters 
+
+H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 0.5]
+				
+
+
+ 
+fittingFunction(x) = (a*x*x*x) + (b*x*x) + (c*x) + d
+fittedData = "f_below_0_8"
+fit  fittingFunction(x) fittedData  via a, b, c, d
+ 
+plot fittedData w l t 'original data' , fittingFunction(x) dt 2 t 'fit'  
+ 
+ 
+print "\n------------------------------------------------------"
+
+print "\n------------------------------------------------------"
+ 
+print "\nFit done \n"
+
+
+
+
+
+
+
+
+
+
+ 

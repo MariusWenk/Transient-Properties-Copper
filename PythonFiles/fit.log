@@ -1,0 +1,3167 @@
+
+
+*******************************************************************************
+Mon Jul  4 12:54:17 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x) + Lorentz5_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((omega1**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((omega2**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((omega3**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((omega4**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz5_i_restr(x) = P5(A5) * H5(Gamma5) * x / ((omega5**2 - x**2)**2 + (x*H5(Gamma5))**2)
+	P5(x) = (35.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H5(x) = (3.0-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        A2            Gamma2        A3            Gamma3        A4            Gamma4        A5            Gamma5       
+   0 1.9802424331e+02   0.00e+00  3.84e-02    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  63 7.8506459112e+01  -5.50e-01  3.84e-09    3.604714e+00   3.915709e+04   2.881840e+04   2.073122e+00   1.549084e+00   4.543503e+04   4.626078e+04   3.545746e+00   4.293978e+04   8.320667e-01
+
+After 63 iterations the fit converged.
+final sum of squares of residuals : 78.5065
+rel. change during last iteration : -5.50495e-06
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.4188
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01299
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 3.60471          +/- 61.59        (1709%)
+Gamma1          = 39157.1          +/- 4.468e+09    (1.141e+07%)
+A2              = 28818.4          +/- 1.058e+10    (3.671e+07%)
+Gamma2          = 2.07312          +/- 40.48        (1953%)
+A3              = 1.54908          +/- 29.64        (1914%)
+Gamma3          = 45435            +/- 1.194e+10    (2.628e+07%)
+A4              = 46260.8          +/- 2.334e+10    (5.046e+07%)
+Gamma4          = 3.54575          +/- 77.44        (2184%)
+A5              = 42939.8          +/- 1.685e+10    (3.924e+07%)
+Gamma5          = 0.832067         +/- 8.706        (1046%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 A2     Gamma2 A3     Gamma3 A4     Gamma4 A5     Gamma5 
+A1              1.000 
+Gamma1          0.759  1.000 
+A2             -0.884 -0.488  1.000 
+Gamma2         -0.894 -0.490  0.959  1.000 
+A3              0.690  0.339 -0.876 -0.753  1.000 
+Gamma3          0.507  0.181 -0.786 -0.627  0.942  1.000 
+A4             -0.637 -0.365  0.735  0.621 -0.936 -0.812  1.000 
+Gamma4         -0.617 -0.394  0.648  0.552 -0.865 -0.706  0.975  1.000 
+A5              0.626  0.355 -0.716 -0.615  0.896  0.761 -0.983 -0.946  1.000 
+Gamma5          0.602  0.326 -0.708 -0.609  0.872  0.749 -0.953 -0.898  0.987  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:19:03 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((omega1**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((omega2**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((omega3**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((omega4**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 7.2360982244e+02   0.00e+00  4.21e+00    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  20 2.8418532684e+02  -7.34e-01  4.21e+00   -5.883624e+01   6.492322e-01  -6.782180e-01   3.892317e+01   4.631817e+00   2.511787e+00   2.616838e+02   1.565804e+02   5.001512e+00   1.869983e+02   1.530289e+02   3.383320e+00
+
+After 20 iterations the fit converged.
+final sum of squares of residuals : 284.185
+rel. change during last iteration : -7.3433e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.7714
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.68068
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = -58.8362         +/- 4532         (7702%)
+Gamma1          = 0.649232         +/- 82.54        (1.271e+04%)
+omega1          = -0.678218        +/- 2.038        (300.5%)
+A2              = 38.9232          +/- 3.096e+04    (7.955e+04%)
+Gamma2          = 4.63182          +/- 255.6        (5519%)
+omega2          = 2.51179          +/- 0.5586       (22.24%)
+A3              = 261.684          +/- 3.51e+05     (1.341e+05%)
+Gamma3          = 156.58           +/- 1.115e+05    (7.122e+04%)
+omega3          = 5.00151          +/- 0.2893       (5.785%)
+A4              = 186.998          +/- 2.818e+05    (1.507e+05%)
+Gamma4          = 153.029          +/- 1.37e+05     (8.951e+04%)
+omega4          = 3.38332          +/- 0.8985       (26.56%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.959  1.000 
+omega1          0.668  0.702  1.000 
+A2              0.464  0.399  0.175  1.000 
+Gamma2          0.376  0.319  0.133  0.966  1.000 
+omega2          0.326  0.283  0.128  0.826  0.826  1.000 
+A3              0.489  0.430  0.201  0.696  0.639  0.411  1.000 
+Gamma3          0.379  0.333  0.156  0.524  0.481  0.296  0.895  1.000 
+omega3         -0.156 -0.138 -0.066 -0.168 -0.155 -0.055 -0.307 -0.265  1.000 
+A4             -0.547 -0.477 -0.219 -0.949 -0.893 -0.696 -0.858 -0.683  0.276  1.000 
+Gamma4         -0.576 -0.505 -0.236 -0.869 -0.794 -0.552 -0.874 -0.687  0.290  0.968  1.000 
+omega4          0.359  0.309  0.136  0.869  0.823  0.814  0.341  0.203  0.037 -0.705 -0.594  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:20:28 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((omega1**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((omega2**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((omega3**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((omega4**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 7.2360982244e+02   0.00e+00  4.21e+00    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  20 2.8418532684e+02  -7.34e-01  4.21e+00   -5.883624e+01   6.492322e-01  -6.782180e-01   3.892317e+01   4.631817e+00   2.511787e+00   2.616838e+02   1.565804e+02   5.001512e+00   1.869983e+02   1.530289e+02   3.383320e+00
+
+After 20 iterations the fit converged.
+final sum of squares of residuals : 284.185
+rel. change during last iteration : -7.3433e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.7714
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.68068
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = -58.8362         +/- 4532         (7702%)
+Gamma1          = 0.649232         +/- 82.54        (1.271e+04%)
+omega1          = -0.678218        +/- 2.038        (300.5%)
+A2              = 38.9232          +/- 3.096e+04    (7.955e+04%)
+Gamma2          = 4.63182          +/- 255.6        (5519%)
+omega2          = 2.51179          +/- 0.5586       (22.24%)
+A3              = 261.684          +/- 3.51e+05     (1.341e+05%)
+Gamma3          = 156.58           +/- 1.115e+05    (7.122e+04%)
+omega3          = 5.00151          +/- 0.2893       (5.785%)
+A4              = 186.998          +/- 2.818e+05    (1.507e+05%)
+Gamma4          = 153.029          +/- 1.37e+05     (8.951e+04%)
+omega4          = 3.38332          +/- 0.8985       (26.56%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.959  1.000 
+omega1          0.668  0.702  1.000 
+A2              0.464  0.399  0.175  1.000 
+Gamma2          0.376  0.319  0.133  0.966  1.000 
+omega2          0.326  0.283  0.128  0.826  0.826  1.000 
+A3              0.489  0.430  0.201  0.696  0.639  0.411  1.000 
+Gamma3          0.379  0.333  0.156  0.524  0.481  0.296  0.895  1.000 
+omega3         -0.156 -0.138 -0.066 -0.168 -0.155 -0.055 -0.307 -0.265  1.000 
+A4             -0.547 -0.477 -0.219 -0.949 -0.893 -0.696 -0.858 -0.683  0.276  1.000 
+Gamma4         -0.576 -0.505 -0.236 -0.869 -0.794 -0.552 -0.874 -0.687  0.290  0.968  1.000 
+omega4          0.359  0.309  0.136  0.869  0.823  0.814  0.341  0.203  0.037 -0.705 -0.594  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:20:50 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x) + Lorentz5_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((omega1**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((omega2**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((omega3**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((omega4**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz5_i_restr(x) = P5(A5) * H5(Gamma5) * x / ((omega5**2 - x**2)**2 + (x*H5(Gamma5))**2)
+	P5(x) = (35.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H5(x) = (3.0-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        A2            Gamma2        A3            Gamma3        A4            Gamma4        A5            Gamma5       
+   0 1.9802424331e+02   0.00e+00  3.84e-02    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  63 7.8506459112e+01  -5.50e-01  3.84e-09    3.604714e+00   3.915709e+04   2.881840e+04   2.073122e+00   1.549084e+00   4.543503e+04   4.626078e+04   3.545746e+00   4.293978e+04   8.320667e-01
+
+After 63 iterations the fit converged.
+final sum of squares of residuals : 78.5065
+rel. change during last iteration : -5.50495e-06
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.4188
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01299
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 3.60471          +/- 61.59        (1709%)
+Gamma1          = 39157.1          +/- 4.468e+09    (1.141e+07%)
+A2              = 28818.4          +/- 1.058e+10    (3.671e+07%)
+Gamma2          = 2.07312          +/- 40.48        (1953%)
+A3              = 1.54908          +/- 29.64        (1914%)
+Gamma3          = 45435            +/- 1.194e+10    (2.628e+07%)
+A4              = 46260.8          +/- 2.334e+10    (5.046e+07%)
+Gamma4          = 3.54575          +/- 77.44        (2184%)
+A5              = 42939.8          +/- 1.685e+10    (3.924e+07%)
+Gamma5          = 0.832067         +/- 8.706        (1046%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 A2     Gamma2 A3     Gamma3 A4     Gamma4 A5     Gamma5 
+A1              1.000 
+Gamma1          0.759  1.000 
+A2             -0.884 -0.488  1.000 
+Gamma2         -0.894 -0.490  0.959  1.000 
+A3              0.690  0.339 -0.876 -0.753  1.000 
+Gamma3          0.507  0.181 -0.786 -0.627  0.942  1.000 
+A4             -0.637 -0.365  0.735  0.621 -0.936 -0.812  1.000 
+Gamma4         -0.617 -0.394  0.648  0.552 -0.865 -0.706  0.975  1.000 
+A5              0.626  0.355 -0.716 -0.615  0.896  0.761 -0.983 -0.946  1.000 
+Gamma5          0.602  0.326 -0.708 -0.609  0.872  0.749 -0.953 -0.898  0.987  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:26:23 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x) + Lorentz5_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz5_i_restr(x) = P5(A5) * H5(Gamma5) * x / ((F5(omega5)**2 - x**2)**2 + (x*H5(Gamma5))**2)
+	P5(x) = (35.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H5(x) = (3.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F5(x) = (7.0-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        A5            Gamma5        omega5       
+   0 6.7388379347e+02   0.00e+00  3.98e-01    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  61 4.2101342883e+01  -2.01e-01  3.98e-11    1.060791e+06   4.992604e+05   9.185791e-01   1.092262e+06  -3.325740e-02  -5.533744e-02   1.438309e+06   8.311951e+05   4.108832e-01   1.769968e+06   4.837205e-01   8.850205e-01  -3.722401e-01  -5.812687e+00  -2.051823e+06
+
+After 61 iterations the fit converged.
+final sum of squares of residuals : 42.1013
+rel. change during last iteration : -2.01493e-06
+
+degrees of freedom    (FIT_NDF)                        : 34
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.11278
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.23827
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 1.06079e+06      +/- 4.516e+12    (4.257e+08%)
+Gamma1          = 499260           +/- 9.734e+11    (1.95e+08%)
+omega1          = 0.918579         +/- 0.1485       (16.16%)
+A2              = 1.09226e+06      +/- 2.372e+12    (2.172e+08%)
+Gamma2          = -0.0332574       +/- 1.008        (3032%)
+omega2          = -0.0553374       +/- 0.0479       (86.55%)
+A3              = 1.43831e+06      +/- 4.505e+12    (3.132e+08%)
+Gamma3          = 831195           +/- 1.474e+12    (1.773e+08%)
+omega3          = 0.410883         +/- 0.07822      (19.04%)
+A4              = 1.76997e+06      +/- 3.252e+12    (1.837e+08%)
+Gamma4          = 0.48372          +/- 0.8676       (179.4%)
+omega4          = 0.885021         +/- 0.08738      (9.873%)
+A5              = -0.37224         +/- 280.6        (7.538e+04%)
+Gamma5          = -5.81269         +/- 1948         (3.351e+04%)
+omega5          = -2.05182e+06     +/- 1.321e+14    (6.438e+09%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 A5     Gamma5 omega5 
+A1              1.000 
+Gamma1          0.950  1.000 
+omega1          0.053  0.029  1.000 
+A2             -0.725 -0.701  0.432  1.000 
+Gamma2         -0.547 -0.487  0.386  0.887  1.000 
+omega2         -0.639 -0.591  0.385  0.751  0.635  1.000 
+A3             -0.738 -0.638 -0.346  0.246  0.149  0.272  1.000 
+Gamma3         -0.648 -0.527 -0.349  0.153  0.089  0.206  0.953  1.000 
+omega3          0.518  0.503  0.215 -0.295 -0.190 -0.244 -0.161 -0.134  1.000 
+A4              0.408  0.319  0.233 -0.079 -0.047 -0.119 -0.807 -0.755 -0.174  1.000 
+Gamma4          0.260  0.202  0.148 -0.053 -0.033 -0.075 -0.606 -0.526 -0.208  0.871  1.000 
+omega4         -0.266 -0.206 -0.150  0.042  0.023  0.075  0.548  0.513  0.185 -0.457 -0.350  1.000 
+A5              0.129  0.095 -0.054 -0.276 -0.290 -0.077 -0.108 -0.102  0.040  0.047  0.025 -0.047  1.000 
+Gamma5         -0.129 -0.095  0.054  0.276  0.289  0.077  0.108  0.102 -0.040 -0.047 -0.025  0.046 -1.000  1.000 
+omega5         -0.130 -0.096  0.054  0.277  0.290  0.077  0.108  0.103 -0.041 -0.047 -0.025  0.047 -1.000  1.000  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:28:31 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 7.2026775627e+02   0.00e+00  4.28e-01    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  34 1.2912143864e+02  -9.23e-01  4.28e+00   -2.290902e+01   6.302076e+00   3.322159e-01   1.800683e+01   1.761203e+01  -3.114893e+00   3.631231e+01   8.137597e+01   1.518964e+00   4.481274e+01   1.497897e+01  -1.756310e-01
+
+After 34 iterations the fit converged.
+final sum of squares of residuals : 129.121
+rel. change during last iteration : -9.22557e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.86809
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.48977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = -22.909          +/- 3718         (1.623e+04%)
+Gamma1          = 6.30208          +/- 6360         (1.009e+05%)
+omega1          = 0.332216         +/- 3.066        (922.8%)
+A2              = 18.0068          +/- 1191         (6615%)
+Gamma2          = 17.612           +/- 917.3        (5208%)
+omega2          = -3.11489         +/- 3.704        (118.9%)
+A3              = 36.3123          +/- 3293         (9069%)
+Gamma3          = 81.376           +/- 1.7e+04      (2.089e+04%)
+omega3          = 1.51896          +/- 0.328        (21.59%)
+A4              = 44.8127          +/- 6705         (1.496e+04%)
+Gamma4          = 14.979           +/- 575.6        (3843%)
+omega4          = -0.175631        +/- 0.2357       (134.2%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.954  1.000 
+omega1          0.522  0.524  1.000 
+A2              0.592  0.489  0.238  1.000 
+Gamma2          0.622  0.515  0.246  0.947  1.000 
+omega2         -0.401 -0.321 -0.176 -0.912 -0.764  1.000 
+A3              0.480  0.425  0.022  0.519  0.541 -0.367  1.000 
+Gamma3          0.315  0.279 -0.007  0.360  0.375 -0.254  0.864  1.000 
+omega3         -0.071 -0.062  0.053 -0.132 -0.137  0.095 -0.213 -0.165  1.000 
+A4             -0.876 -0.800 -0.304 -0.739 -0.769  0.527 -0.772 -0.571  0.219  1.000 
+Gamma4         -0.710 -0.621 -0.092 -0.725 -0.754  0.519 -0.795 -0.578  0.240  0.939  1.000 
+omega4          0.873  0.804  0.552  0.502  0.525 -0.351  0.133  0.025  0.092 -0.614 -0.427  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:30:27 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 7.4916587135e+02   0.00e+00  3.27e-01    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  23 2.7764951722e+02  -9.71e-01  3.27e-09    5.499876e+04   4.501638e+04   3.056619e+06   4.849627e+04   2.926352e+00  -1.712204e+00   2.997997e+05   1.620141e+00   1.269581e+00   2.308636e+05   6.023940e+04  -9.880680e-01
+
+After 23 iterations the fit converged.
+final sum of squares of residuals : 277.65
+rel. change during last iteration : -9.70531e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.73935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.50404
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 54998.8          +/- 3.493e+10    (6.35e+07%)
+Gamma1          = 45016.4          +/- 2.076e+10    (4.612e+07%)
+omega1          = 3.05662e+06      +/- 1.947e+12    (6.37e+07%)
+A2              = 48496.3          +/- 4.449e+10    (9.174e+07%)
+Gamma2          = 2.92635          +/- 97.83        (3343%)
+omega2          = -1.7122          +/- 2.246        (131.2%)
+A3              = 299800           +/- 2.839e+11    (9.469e+07%)
+Gamma3          = 1.62014          +/- 10.23        (631.7%)
+omega3          = 1.26958          +/- 0.4434       (34.93%)
+A4              = 230864           +/- 3.286e+11    (1.423e+08%)
+Gamma4          = 60239.4          +/- 1.444e+10    (2.398e+07%)
+omega4          = -0.988068        +/- 1.802        (182.4%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.919  1.000 
+omega1         -0.302 -0.252  1.000 
+A2             -0.214 -0.196  0.220  1.000 
+Gamma2         -0.132 -0.127  0.177  0.964  1.000 
+omega2         -0.396 -0.317  0.205  0.791  0.764  1.000 
+A3              0.365  0.207 -0.265  0.232  0.259 -0.094  1.000 
+Gamma3          0.131  0.036 -0.228  0.166  0.179 -0.041  0.825  1.000 
+omega3          0.093  0.143  0.130 -0.016 -0.017  0.021 -0.099 -0.094  1.000 
+A4             -0.492 -0.395  0.073 -0.688 -0.709 -0.305 -0.659 -0.416  0.038  1.000 
+Gamma4         -0.593 -0.439  0.093 -0.367 -0.391  0.095 -0.750 -0.469  0.073  0.878  1.000 
+omega4         -0.728 -0.615  0.380  0.767  0.670  0.778 -0.232 -0.113  0.011 -0.085  0.223  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:31:22 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (8.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (12.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 8.9448401546e+02   0.00e+00  2.44e-01    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+ 121 8.0166234695e+01  -3.06e-01  2.44e-10    9.084636e+04   1.702416e+01  -3.199779e+00   3.723235e+05   6.782760e-01   1.088369e+00   5.186847e+05   1.731363e+00   8.543212e-02   5.851709e+05   1.582835e+00  -2.892339e+00
+
+After 121 iterations the fit converged.
+final sum of squares of residuals : 80.1662
+rel. change during last iteration : -3.05633e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.47196
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.16665
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 90846.4          +/- 4.291e+10    (4.723e+07%)
+Gamma1          = 17.0242          +/- 708          (4159%)
+omega1          = -3.19978         +/- 6.39         (199.7%)
+A2              = 372323           +/- 6.737e+11    (1.809e+08%)
+Gamma2          = 0.678276         +/- 5.277        (778.1%)
+omega2          = 1.08837          +/- 0.4577       (42.05%)
+A3              = 518685           +/- 4.34e+11     (8.367e+07%)
+Gamma3          = 1.73136          +/- 6.484        (374.5%)
+omega3          = 0.0854321        +/- 0.07597      (88.93%)
+A4              = 585171           +/- 3.269e+11    (5.587e+07%)
+Gamma4          = 1.58283          +/- 3.013        (190.4%)
+omega4          = -2.89234         +/- 0.4206       (14.54%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1         -0.831  1.000 
+omega1         -0.996  0.863  1.000 
+A2              0.173 -0.070 -0.160  1.000 
+Gamma2          0.135 -0.054 -0.124  0.909  1.000 
+omega2         -0.049  0.020  0.045  0.309  0.268  1.000 
+A3              0.025 -0.011 -0.023 -0.646 -0.553 -0.515  1.000 
+Gamma3          0.011 -0.005 -0.010 -0.508 -0.379 -0.395  0.860  1.000 
+omega3          0.042 -0.016 -0.039  0.562  0.479  0.409 -0.437 -0.345  1.000 
+A4             -0.436  0.202  0.409 -0.625 -0.553  0.156 -0.003 -0.024 -0.178  1.000 
+Gamma4         -0.422  0.185  0.393 -0.500 -0.408  0.144 -0.057 -0.037 -0.127  0.907  1.000 
+omega4         -0.106  0.027  0.094 -0.588 -0.523  0.143  0.059  0.026 -0.175  0.741  0.647  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:32:12 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (8.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (12.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 8.7184203953e+02   0.00e+00  2.48e-01    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  16 2.8084704639e+02  -3.97e-01  2.48e-10    1.940015e+00   2.729366e+05   1.981306e+07   1.218864e+06   4.502438e-01   1.160326e+00   1.021571e+06   1.665178e+00   9.353921e-02   1.124896e+06   3.918639e+05  -3.687049e+00
+
+After 16 iterations the fit converged.
+final sum of squares of residuals : 280.847
+rel. change during last iteration : -3.96696e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.75508
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.59046
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 1.94001          +/- 75.89        (3912%)
+Gamma1          = 272937           +/- 1.022e+12    (3.744e+08%)
+omega1          = 1.98131e+07      +/- 9.557e+13    (4.824e+08%)
+A2              = 1.21886e+06      +/- 1.384e+13    (1.136e+09%)
+Gamma2          = 0.450244         +/- 7.334        (1629%)
+omega2          = 1.16033          +/- 0.8293       (71.47%)
+A3              = 1.02157e+06      +/- 3.419e+12    (3.347e+08%)
+Gamma3          = 1.66518          +/- 11.68        (701.5%)
+omega3          = 0.0935392        +/- 0.1404       (150.1%)
+A4              = 1.1249e+06       +/- 7.717e+12    (6.86e+08%)
+Gamma4          = 391864           +/- 4.382e+11    (1.118e+08%)
+omega4          = -3.68705         +/- 5.369        (145.6%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.952  1.000 
+omega1         -0.132 -0.120  1.000 
+A2              0.466  0.350 -0.171  1.000 
+Gamma2          0.273  0.178 -0.187  0.893  1.000 
+omega2         -0.188 -0.145  0.035  0.184  0.197  1.000 
+A3              0.428  0.399  0.053 -0.298 -0.338 -0.522  1.000 
+Gamma3          0.241  0.225  0.028 -0.320 -0.277 -0.408  0.858  1.000 
+omega3          0.050  0.022 -0.067  0.519  0.466  0.378 -0.352 -0.310  1.000 
+A4             -0.959 -0.868  0.110 -0.592 -0.402  0.225 -0.432 -0.251 -0.093  1.000 
+Gamma4         -0.740 -0.623 -0.092 -0.603 -0.428  0.226 -0.395 -0.229 -0.108  0.876  1.000 
+omega4         -0.947 -0.843  0.104 -0.601 -0.410  0.226 -0.417 -0.239 -0.097  0.986  0.859  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:32:48 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (8.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (12.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 8.7184203953e+02   0.00e+00  2.48e-01    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  16 2.8084704639e+02  -3.97e-01  2.48e-10    1.940015e+00   2.729366e+05   1.981306e+07   1.218864e+06   4.502438e-01   1.160326e+00   1.021571e+06   1.665178e+00   9.353921e-02   1.124896e+06   3.918639e+05  -3.687049e+00
+
+After 16 iterations the fit converged.
+final sum of squares of residuals : 280.847
+rel. change during last iteration : -3.96696e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.75508
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.59046
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 1.94001          +/- 75.89        (3912%)
+Gamma1          = 272937           +/- 1.022e+12    (3.744e+08%)
+omega1          = 1.98131e+07      +/- 9.557e+13    (4.824e+08%)
+A2              = 1.21886e+06      +/- 1.384e+13    (1.136e+09%)
+Gamma2          = 0.450244         +/- 7.334        (1629%)
+omega2          = 1.16033          +/- 0.8293       (71.47%)
+A3              = 1.02157e+06      +/- 3.419e+12    (3.347e+08%)
+Gamma3          = 1.66518          +/- 11.68        (701.5%)
+omega3          = 0.0935392        +/- 0.1404       (150.1%)
+A4              = 1.1249e+06       +/- 7.717e+12    (6.86e+08%)
+Gamma4          = 391864           +/- 4.382e+11    (1.118e+08%)
+omega4          = -3.68705         +/- 5.369        (145.6%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.952  1.000 
+omega1         -0.132 -0.120  1.000 
+A2              0.466  0.350 -0.171  1.000 
+Gamma2          0.273  0.178 -0.187  0.893  1.000 
+omega2         -0.188 -0.145  0.035  0.184  0.197  1.000 
+A3              0.428  0.399  0.053 -0.298 -0.338 -0.522  1.000 
+Gamma3          0.241  0.225  0.028 -0.320 -0.277 -0.408  0.858  1.000 
+omega3          0.050  0.022 -0.067  0.519  0.466  0.378 -0.352 -0.310  1.000 
+A4             -0.959 -0.868  0.110 -0.592 -0.402  0.225 -0.432 -0.251 -0.093  1.000 
+Gamma4         -0.740 -0.623 -0.092 -0.603 -0.428  0.226 -0.395 -0.229 -0.108  0.876  1.000 
+omega4         -0.947 -0.843  0.104 -0.601 -0.410  0.226 -0.417 -0.239 -0.097  0.986  0.859  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 13:33:15 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 7.2581904298e+02   0.00e+00  3.30e-01    1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00   1.000000e-01   1.000000e-01   3.000000e+00
+  37 2.7865869030e+02  -9.74e-01  3.30e-05    2.848875e+02   2.307719e+02   2.808571e+00   2.674421e+02   3.205973e-01  -2.072836e+00   5.559111e+02   4.107500e+00   1.364721e+00   4.542796e+02   2.197763e+02  -3.849727e-01
+
+After 37 iterations the fit converged.
+final sum of squares of residuals : 278.659
+rel. change during last iteration : -9.73856e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.74432
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.53132
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 284.887          +/- 7.839e+05    (2.752e+05%)
+Gamma1          = 230.772          +/- 4.755e+05    (2.061e+05%)
+omega1          = 2.80857          +/- 2.19         (77.98%)
+A2              = 267.442          +/- 4.286e+05    (1.603e+05%)
+Gamma2          = 0.320597         +/- 3.687        (1150%)
+omega2          = -2.07284         +/- 1.363        (65.75%)
+A3              = 555.911          +/- 2.016e+06    (3.626e+05%)
+Gamma3          = 4.1075           +/- 86.24        (2100%)
+omega3          = 1.36472          +/- 0.6521       (47.78%)
+A4              = 454.28           +/- 1.438e+06    (3.166e+05%)
+Gamma4          = 219.776          +/- 3.013e+05    (1.371e+05%)
+omega4          = -0.384973        +/- 0.5186       (134.7%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.937  1.000 
+omega1          0.063  0.012  1.000 
+A2             -0.246 -0.331  0.636  1.000 
+Gamma2         -0.144 -0.178  0.549  0.903  1.000 
+omega2         -0.578 -0.547  0.466  0.663  0.575  1.000 
+A3              0.320  0.193  0.280  0.514  0.451  0.055  1.000 
+Gamma3          0.241  0.141  0.216  0.414  0.362  0.049  0.913  1.000 
+omega3         -0.015  0.020 -0.056 -0.207 -0.174 -0.056 -0.426 -0.384  1.000 
+A4             -0.549 -0.404 -0.382 -0.528 -0.489  0.016 -0.914 -0.770  0.374  1.000 
+Gamma4         -0.479 -0.318 -0.378 -0.582 -0.520 -0.031 -0.877 -0.709  0.325  0.974  1.000 
+omega4          0.398  0.415  0.107 -0.293 -0.202 -0.217 -0.550 -0.517  0.457  0.300  0.302  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:08:53 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'A1' is zero.
+Warning: Initial value of parameter 'Gamma1' is zero.
+Warning: Initial value of parameter 'omega1' is zero.
+Warning: Initial value of parameter 'A2' is zero.
+Warning: Initial value of parameter 'Gamma2' is zero.
+Warning: Initial value of parameter 'omega2' is zero.
+Warning: Initial value of parameter 'A3' is zero.
+Warning: Initial value of parameter 'Gamma3' is zero.
+Warning: Initial value of parameter 'omega3' is zero.
+Warning: Initial value of parameter 'A4' is zero.
+Warning: Initial value of parameter 'Gamma4' is zero.
+Warning: Initial value of parameter 'omega4' is zero.
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 6.4011305074e+02   0.00e+00  0.00e+00    1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30   1.000000e-30
+BREAK: Singular matrix in Givens()
+
+*******************************************************************************
+Mon Jul  4 14:09:37 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 6.2895216116e+02   0.00e+00  1.76e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  34 2.7748668575e+02  -5.03e-01  1.76e-09    1.447808e+05   1.155799e+05   8.554480e-01   2.976593e+05   9.002911e-01  -7.815723e-01   2.881815e+05   1.135120e+05  -2.811117e-01   1.493768e+05   5.228351e-01   3.782760e-01
+
+After 34 iterations the fit converged.
+final sum of squares of residuals : 277.487
+rel. change during last iteration : -5.03144e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.73855
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.49964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 144781           +/- 2.104e+11    (1.453e+08%)
+Gamma1          = 115580           +/- 8.631e+10    (7.468e+07%)
+omega1          = 0.855448         +/- 0.5727       (66.95%)
+A2              = 297659           +/- 1.752e+12    (5.887e+08%)
+Gamma2          = 0.900291         +/- 20.89        (2320%)
+omega2          = -0.781572        +/- 0.7944       (101.6%)
+A3              = 288182           +/- 5.401e+11    (1.874e+08%)
+Gamma3          = 113512           +/- 7.166e+10    (6.313e+07%)
+omega3          = -0.281112        +/- 0.3163       (112.5%)
+A4              = 149377           +/- 5.498e+10    (3.681e+07%)
+Gamma4          = 0.522835         +/- 2.187        (418.3%)
+omega4          = 0.378276         +/- 0.1881       (49.72%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.902  1.000 
+omega1          0.898  0.826  1.000 
+A2             -0.880 -0.703 -0.759  1.000 
+Gamma2         -0.839 -0.632 -0.681  0.974  1.000 
+omega2          0.640  0.591  0.658 -0.301 -0.267  1.000 
+A3              0.469  0.304  0.387 -0.788 -0.750 -0.134  1.000 
+Gamma3          0.306  0.177  0.266 -0.640 -0.582 -0.209  0.948  1.000 
+omega3         -0.489 -0.346 -0.378  0.697  0.688  0.078 -0.522 -0.418  1.000 
+A4             -0.150 -0.083 -0.135  0.374  0.325  0.168 -0.749 -0.751  0.055  1.000 
+Gamma4         -0.100 -0.058 -0.088  0.243  0.210  0.108 -0.553 -0.528 -0.037  0.870  1.000 
+omega4          0.095  0.046  0.090 -0.248 -0.218 -0.105  0.500  0.504  0.007 -0.431 -0.329  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:32:49 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 6.5552374300e+02   0.00e+00  1.76e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  50 7.1278359338e+01  -4.40e-01  1.76e-10    4.831766e+05   3.084541e+05  -2.350164e+00   4.748071e+05   5.221517e-02  -1.753931e+00   6.348337e+05   3.229991e+05  -5.822354e-01   1.049146e+06   5.816784e-01   2.686076e-01
+
+After 50 iterations the fit converged.
+final sum of squares of residuals : 71.2784
+rel. change during last iteration : -4.39689e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.38796
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.92644
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 483177           +/- 7.172e+11    (1.484e+08%)
+Gamma1          = 308454           +/- 1.089e+11    (3.529e+07%)
+omega1          = -2.35016         +/- 2.688        (114.4%)
+A2              = 474807           +/- 4.971e+11    (1.047e+08%)
+Gamma2          = 0.0522152        +/- 1.233        (2361%)
+omega2          = -1.75393         +/- 0.3292       (18.77%)
+A3              = 634834           +/- 7.045e+11    (1.11e+08%)
+Gamma3          = 322999           +/- 1.99e+11     (6.162e+07%)
+omega3          = -0.582235        +/- 0.1243       (21.35%)
+A4              = 1.04915e+06      +/- 1.091e+12    (1.04e+08%)
+Gamma4          = 0.581678         +/- 1.052        (180.9%)
+omega4          = 0.268608         +/- 0.08113      (30.2%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1         -0.476  1.000 
+omega1         -0.991  0.564  1.000 
+A2             -0.105  0.034  0.105  1.000 
+Gamma2         -0.151  0.019  0.144  0.876  1.000 
+omega2          0.063  0.010 -0.056  0.588  0.499  1.000 
+A3             -0.080 -0.029  0.066 -0.804 -0.625 -0.488  1.000 
+Gamma3         -0.098 -0.035  0.082 -0.747 -0.543 -0.428  0.941  1.000 
+omega3         -0.035  0.006  0.034  0.454  0.401  0.377 -0.081 -0.078  1.000 
+A4              0.039  0.022 -0.031  0.436  0.306  0.246 -0.751 -0.681 -0.195  1.000 
+Gamma4          0.021  0.012 -0.017  0.279  0.194  0.159 -0.571 -0.480 -0.209  0.854  1.000 
+omega4         -0.040 -0.014  0.034 -0.257 -0.180 -0.136  0.433  0.399  0.152 -0.252 -0.185  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:35:34 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 3.4867165604e+03   0.00e+00  1.73e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  24 2.5613745413e+03  -2.44e-01  1.73e-02    1.138620e+03   3.181380e+02  -2.253736e+00  -3.284036e+02   1.458165e+03   6.650538e+02  -9.073787e+02   1.101431e+02  -1.058755e+03   4.781765e+02   4.639956e+02  -2.659683e+02
+
+After 24 iterations the fit converged.
+final sum of squares of residuals : 2561.37
+rel. change during last iteration : -2.43573e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.32024
+variance of residuals (reduced chisquare) = WSSR/ndf   : 69.2263
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 1138.62          +/- 1.725e+07    (1.515e+06%)
+Gamma1          = 318.138          +/- 2.293e+06    (7.208e+05%)
+omega1          = -2.25374         +/- 4.363        (193.6%)
+A2              = -328.404         +/- 2.62e+06     (7.978e+05%)
+Gamma2          = 1458.17          +/- 2.948e+09    (2.022e+08%)
+omega2          = 665.054          +/- 3.84e+07     (5.774e+06%)
+A3              = -907.379         +/- 2.137e+08    (2.355e+07%)
+Gamma3          = 110.143          +/- 1.168e+08    (1.06e+08%)
+omega3          = -1058.76         +/- 1.051e+08    (9.927e+06%)
+A4              = 478.177          +/- 3.309e+07    (6.92e+06%)
+Gamma4          = 463.996          +/- 1.588e+07    (3.423e+06%)
+omega4          = -265.968         +/- 6.228e+04    (2.342e+04%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.933  1.000 
+omega1         -0.767 -0.838  1.000 
+A2              0.601  0.441 -0.299  1.000 
+Gamma2          0.465  0.334 -0.230  0.852  1.000 
+omega2         -0.032 -0.096  0.037  0.105  0.104  1.000 
+A3             -0.588 -0.619  0.293 -0.414 -0.297  0.121  1.000 
+Gamma3         -0.553 -0.578  0.267 -0.390 -0.278  0.110  0.994  1.000 
+omega3         -0.521 -0.523  0.392 -0.081 -0.038 -0.004  0.372  0.378  1.000 
+A4              0.578  0.597 -0.277  0.413  0.296 -0.111 -0.999 -0.996 -0.376  1.000 
+Gamma4         -0.622 -0.672  0.331 -0.437 -0.318  0.142  0.988  0.967  0.348 -0.980  1.000 
+omega4          0.589  0.585 -0.509  0.046  0.006  0.033 -0.223 -0.218 -0.898  0.225 -0.212  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:35:54 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 6.5552374300e+02   0.00e+00  1.76e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  50 7.1278359338e+01  -4.40e-01  1.76e-10    4.831766e+05   3.084541e+05  -2.350164e+00   4.748071e+05   5.221517e-02  -1.753931e+00   6.348337e+05   3.229991e+05  -5.822354e-01   1.049146e+06   5.816784e-01   2.686076e-01
+
+After 50 iterations the fit converged.
+final sum of squares of residuals : 71.2784
+rel. change during last iteration : -4.39689e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.38796
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.92644
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 483177           +/- 7.172e+11    (1.484e+08%)
+Gamma1          = 308454           +/- 1.089e+11    (3.529e+07%)
+omega1          = -2.35016         +/- 2.688        (114.4%)
+A2              = 474807           +/- 4.971e+11    (1.047e+08%)
+Gamma2          = 0.0522152        +/- 1.233        (2361%)
+omega2          = -1.75393         +/- 0.3292       (18.77%)
+A3              = 634834           +/- 7.045e+11    (1.11e+08%)
+Gamma3          = 322999           +/- 1.99e+11     (6.162e+07%)
+omega3          = -0.582235        +/- 0.1243       (21.35%)
+A4              = 1.04915e+06      +/- 1.091e+12    (1.04e+08%)
+Gamma4          = 0.581678         +/- 1.052        (180.9%)
+omega4          = 0.268608         +/- 0.08113      (30.2%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1         -0.476  1.000 
+omega1         -0.991  0.564  1.000 
+A2             -0.105  0.034  0.105  1.000 
+Gamma2         -0.151  0.019  0.144  0.876  1.000 
+omega2          0.063  0.010 -0.056  0.588  0.499  1.000 
+A3             -0.080 -0.029  0.066 -0.804 -0.625 -0.488  1.000 
+Gamma3         -0.098 -0.035  0.082 -0.747 -0.543 -0.428  0.941  1.000 
+omega3         -0.035  0.006  0.034  0.454  0.401  0.377 -0.081 -0.078  1.000 
+A4              0.039  0.022 -0.031  0.436  0.306  0.246 -0.751 -0.681 -0.195  1.000 
+Gamma4          0.021  0.012 -0.017  0.279  0.194  0.159 -0.571 -0.480 -0.209  0.854  1.000 
+omega4         -0.040 -0.014  0.034 -0.257 -0.180 -0.136  0.433  0.399  0.152 -0.252 -0.185  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:36:49 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.8)/pi*(atan(x)+pi/2)+0.8
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 5.6587335603e+02   0.00e+00  1.45e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  28 3.0347963276e+02  -6.62e-01  1.45e-09    2.412228e+05   8.426854e+04   1.832241e-02   2.219814e+05   9.415632e-01  -7.891477e-01   3.559862e+05   9.571022e+04  -2.862330e-01   1.699328e+05   5.230672e-01   3.760633e-01
+
+After 28 iterations the fit converged.
+final sum of squares of residuals : 303.48
+rel. change during last iteration : -6.62167e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.86394
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.20215
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 241223           +/- 6.322e+11    (2.621e+08%)
+Gamma1          = 84268.5          +/- 4.892e+10    (5.805e+07%)
+omega1          = 0.0183224        +/- 0.3516       (1919%)
+A2              = 221981           +/- 1.055e+12    (4.754e+08%)
+Gamma2          = 0.941563         +/- 23.6         (2506%)
+omega2          = -0.789148        +/- 0.8633       (109.4%)
+A3              = 355986           +/- 8.735e+11    (2.454e+08%)
+Gamma3          = 95710.2          +/- 5.352e+10    (5.592e+07%)
+omega3          = -0.286233        +/- 0.3358       (117.3%)
+A4              = 169933           +/- 7.427e+10    (4.371e+07%)
+Gamma4          = 0.523067         +/- 2.285        (436.8%)
+omega4          = 0.376063         +/- 0.1961       (52.16%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.905  1.000 
+omega1          0.900  0.833  1.000 
+A2             -0.885 -0.713 -0.763  1.000 
+Gamma2         -0.844 -0.644 -0.686  0.975  1.000 
+omega2          0.649  0.601  0.669 -0.318 -0.283  1.000 
+A3              0.482  0.319  0.396 -0.792 -0.756 -0.117  1.000 
+Gamma3          0.317  0.189  0.272 -0.642 -0.586 -0.197  0.947  1.000 
+omega3         -0.499 -0.359 -0.385  0.704  0.696  0.066 -0.538 -0.431  1.000 
+A4             -0.154 -0.088 -0.136  0.373  0.326  0.163 -0.745 -0.751  0.065  1.000 
+Gamma4         -0.102 -0.061 -0.089  0.243  0.210  0.105 -0.550 -0.528 -0.029  0.870  1.000 
+omega4          0.099  0.051  0.091 -0.249 -0.219 -0.101  0.498  0.504 -0.001 -0.430 -0.328  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:37:36 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 5.9883712533e+02   0.00e+00  1.77e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  18 3.0347986564e+02  -8.71e-01  1.77e-09    3.028342e+05   1.348476e+05   3.060694e-01   1.508269e+05   9.383376e-01  -7.887274e-01   2.476771e+05   8.172199e+04  -2.857178e-01   1.485095e+05   5.228904e-01   3.763146e-01
+
+After 18 iterations the fit converged.
+final sum of squares of residuals : 303.48
+rel. change during last iteration : -8.70532e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.86394
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.20216
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 302834           +/- 9.934e+11    (3.281e+08%)
+Gamma1          = 134848           +/- 1.249e+11    (9.265e+07%)
+omega1          = 0.306069         +/- 0.315        (102.9%)
+A2              = 150827           +/- 4.857e+11    (3.22e+08%)
+Gamma2          = 0.938338         +/- 23.45        (2499%)
+omega2          = -0.788727        +/- 0.8608       (109.1%)
+A3              = 247677           +/- 4.222e+11    (1.705e+08%)
+Gamma3          = 81722            +/- 3.9e+10      (4.772e+07%)
+omega3          = -0.285718        +/- 0.3352       (117.3%)
+A4              = 148509           +/- 5.673e+10    (3.82e+07%)
+Gamma4          = 0.52289          +/- 2.284        (436.9%)
+omega4          = 0.376315         +/- 0.1962       (52.13%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.905  1.000 
+omega1          0.900  0.832  1.000 
+A2             -0.885 -0.712 -0.762  1.000 
+Gamma2         -0.844 -0.642 -0.685  0.974  1.000 
+omega2          0.648  0.600  0.668 -0.318 -0.283  1.000 
+A3              0.481  0.318  0.396 -0.792 -0.755 -0.118  1.000 
+Gamma3          0.316  0.188  0.271 -0.642 -0.586 -0.197  0.947  1.000 
+omega3         -0.499 -0.358 -0.385  0.704  0.695  0.066 -0.536 -0.429  1.000 
+A4             -0.154 -0.088 -0.136  0.373  0.326  0.163 -0.745 -0.751  0.064  1.000 
+Gamma4         -0.102 -0.061 -0.089  0.243  0.210  0.105 -0.550 -0.528 -0.029  0.870  1.000 
+omega4          0.099  0.050  0.091 -0.249 -0.219 -0.101  0.498  0.504 -0.001 -0.430 -0.328  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:38:27 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.5)/pi*(atan(x)+pi/2)+0.5
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 5.7112737248e+02   0.00e+00  1.57e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  23 3.0347974537e+02  -7.29e-01  1.57e-09    1.849555e+05   8.801475e+04   1.525725e-01   1.810623e+05   9.393211e-01  -7.889484e-01   3.271344e+05   8.926786e+04  -2.859373e-01   1.610672e+05   5.231182e-01   3.762155e-01
+
+After 23 iterations the fit converged.
+final sum of squares of residuals : 303.48
+rel. change during last iteration : -7.29107e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.86394
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.20216
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 184956           +/- 3.71e+11     (2.006e+08%)
+Gamma1          = 88014.8          +/- 5.328e+10    (6.054e+07%)
+omega1          = 0.152572         +/- 0.3285       (215.3%)
+A2              = 181062           +/- 7.007e+11    (3.87e+08%)
+Gamma2          = 0.939321         +/- 23.5         (2502%)
+omega2          = -0.788948        +/- 0.8617       (109.2%)
+A3              = 327134           +/- 7.369e+11    (2.253e+08%)
+Gamma3          = 89267.9          +/- 4.654e+10    (5.214e+07%)
+omega3          = -0.285937        +/- 0.3354       (117.3%)
+A4              = 161067           +/- 6.673e+10    (4.143e+07%)
+Gamma4          = 0.523118         +/- 2.285        (436.8%)
+omega4          = 0.376216         +/- 0.1962       (52.15%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.905  1.000 
+omega1          0.900  0.832  1.000 
+A2             -0.885 -0.712 -0.763  1.000 
+Gamma2         -0.844 -0.643 -0.685  0.974  1.000 
+omega2          0.649  0.600  0.668 -0.318 -0.283  1.000 
+A3              0.482  0.319  0.396 -0.792 -0.755 -0.118  1.000 
+Gamma3          0.316  0.188  0.271 -0.642 -0.586 -0.197  0.947  1.000 
+omega3         -0.499 -0.358 -0.385  0.704  0.695  0.066 -0.537 -0.430  1.000 
+A4             -0.154 -0.088 -0.136  0.373  0.326  0.163 -0.745 -0.751  0.064  1.000 
+Gamma4         -0.102 -0.061 -0.089  0.243  0.210  0.105 -0.550 -0.528 -0.029  0.870  1.000 
+omega4          0.099  0.050  0.091 -0.249 -0.219 -0.101  0.498  0.504 -0.001 -0.430 -0.328  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:38:47 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (2.0-0.5)/pi*(atan(x)+pi/2)+0.5
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 6.4161575228e+02   0.00e+00  1.45e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  47 7.1278333435e+01  -1.41e-01  1.45e-10    2.792432e+05   4.232717e+05  -4.880350e+01   5.390331e+05   5.254304e-02  -1.754350e+00   7.173393e+05   3.511180e+05  -5.825329e-01   8.403177e+05   5.813252e-01   2.683521e-01
+
+After 47 iterations the fit converged.
+final sum of squares of residuals : 71.2783
+rel. change during last iteration : -1.41185e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.38796
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.92644
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 279243           +/- 2.391e+11    (8.563e+07%)
+Gamma1          = 423272           +/- 2.045e+11    (4.831e+07%)
+omega1          = -48.8035         +/- 2090         (4282%)
+A2              = 539033           +/- 6.411e+11    (1.189e+08%)
+Gamma2          = 0.052543         +/- 1.233        (2347%)
+omega2          = -1.75435         +/- 0.3295       (18.78%)
+A3              = 717339           +/- 8.998e+11    (1.254e+08%)
+Gamma3          = 351118           +/- 2.353e+11    (6.7e+07%)
+omega3          = -0.582533        +/- 0.1244       (21.35%)
+A4              = 840318           +/- 6.998e+11    (8.328e+07%)
+Gamma4          = 0.581325         +/- 1.051        (180.9%)
+omega4          = 0.268352         +/- 0.0811       (30.22%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1         -0.473  1.000 
+omega1         -0.991  0.561  1.000 
+A2             -0.105  0.034  0.105  1.000 
+Gamma2         -0.151  0.018  0.143  0.876  1.000 
+omega2          0.063  0.010 -0.056  0.588  0.499  1.000 
+A3             -0.080 -0.030  0.066 -0.804 -0.625 -0.489  1.000 
+Gamma3         -0.098 -0.035  0.082 -0.747 -0.543 -0.428  0.941  1.000 
+omega3         -0.035  0.006  0.033  0.454  0.401  0.377 -0.082 -0.079  1.000 
+A4              0.039  0.022 -0.031  0.436  0.307  0.246 -0.751 -0.681 -0.194  1.000 
+Gamma4          0.021  0.012 -0.017  0.279  0.194  0.159 -0.571 -0.480 -0.208  0.854  1.000 
+omega4         -0.040 -0.014  0.034 -0.257 -0.181 -0.136  0.433  0.399  0.151 -0.252 -0.186  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:42:15 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (2.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (4.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-4.0)/pi*(atan(x)+pi/2)+4.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (8.0-6.0)/pi*(atan(x)+pi/2)+6.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 7.8667691945e+02   0.00e+00  6.88e-02    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  45 3.0549100185e+02  -4.76e-01  6.88e-10    5.841479e-01   3.594897e+05  -4.734681e+05   2.729288e+05  -5.134300e-03  -7.571444e-01   3.303155e+05   1.666434e+05  -1.008705e+06   2.824501e+05   4.231842e+00  -3.480599e+05
+
+After 45 iterations the fit converged.
+final sum of squares of residuals : 305.491
+rel. change during last iteration : -4.75859e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.87341
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.25651
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 0.584148         +/- 1.218        (208.5%)
+Gamma1          = 359490           +/- 2.901e+11    (8.069e+07%)
+omega1          = -473468          +/- 5.998e+10    (1.267e+07%)
+A2              = 272929           +/- 1.775e+11    (6.504e+07%)
+Gamma2          = -0.0051343       +/- 1.899        (3.7e+04%)
+omega2          = -0.757144        +/- 0.3176       (41.95%)
+A3              = 330315           +/- 3.129e+11    (9.472e+07%)
+Gamma3          = 166643           +/- 9.182e+10    (5.51e+07%)
+omega3          = -1.0087e+06      +/- 4.035e+11    (4e+07%)
+A4              = 282450           +/- 3.159e+11    (1.118e+08%)
+Gamma4          = 4.23184          +/- 85.51        (2021%)
+omega4          = -348060          +/- 1.064e+11    (3.056e+07%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.793  1.000 
+omega1          0.423  0.323  1.000 
+A2             -0.197 -0.173 -0.104  1.000 
+Gamma2         -0.186 -0.154 -0.100  0.792  1.000 
+omega2          0.031  0.029  0.016  0.287  0.237  1.000 
+A3              0.008  0.007  0.007 -0.443 -0.332 -0.196  1.000 
+Gamma3         -0.009 -0.002 -0.001 -0.470 -0.333 -0.199  0.875  1.000 
+omega3         -0.006 -0.005 -0.005  0.077  0.079  0.040  0.446  0.358  1.000 
+A4             -0.032 -0.021 -0.014  0.128  0.094  0.077 -0.738 -0.563 -0.431  1.000 
+Gamma4         -0.035 -0.022 -0.016  0.082  0.064  0.060 -0.675 -0.482 -0.398  0.935  1.000 
+omega4         -0.020 -0.011 -0.008 -0.087 -0.055 -0.024  0.026  0.079  0.050  0.386  0.373  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:42:45 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (2.0-1.5)/pi*(atan(x)+pi/2)+1.5
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (4.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-4.0)/pi*(atan(x)+pi/2)+4.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (8.0-6.0)/pi*(atan(x)+pi/2)+6.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 7.8831457580e+02   0.00e+00  5.40e-02    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  49 4.1869356594e+02  -2.17e-01  5.40e-10    4.182312e-01   2.294916e+05   2.581133e+05   3.064062e+05   6.584936e-02  -5.127736e-01   3.681078e+05   1.696537e+05  -1.078336e+06   3.273643e+05   3.990184e+00  -3.995497e+05
+
+After 49 iterations the fit converged.
+final sum of squares of residuals : 418.694
+rel. change during last iteration : -2.17342e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.36393
+variance of residuals (reduced chisquare) = WSSR/ndf   : 11.316
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 0.418231         +/- 3.433        (820.7%)
+Gamma1          = 229492           +/- 3.304e+11    (1.44e+08%)
+omega1          = 258113           +/- 1.088e+11    (4.217e+07%)
+A2              = 306406           +/- 4.085e+11    (1.333e+08%)
+Gamma2          = 0.0658494        +/- 3.068        (4659%)
+omega2          = -0.512774        +/- 0.3602       (70.24%)
+A3              = 368108           +/- 4.763e+11    (1.294e+08%)
+Gamma3          = 169654           +/- 1.163e+11    (6.857e+07%)
+omega3          = -1.07834e+06     +/- 5.422e+11    (5.028e+07%)
+A4              = 327364           +/- 4.965e+11    (1.517e+08%)
+Gamma4          = 3.99018          +/- 88.99        (2230%)
+omega4          = -399550          +/- 1.627e+11    (4.071e+07%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.838  1.000 
+omega1          0.586  0.492  1.000 
+A2             -0.685 -0.529 -0.504  1.000 
+Gamma2         -0.589 -0.407 -0.422  0.875  1.000 
+omega2          0.323  0.264  0.268 -0.018 -0.014  1.000 
+A3              0.105  0.057  0.100 -0.446 -0.372 -0.179  1.000 
+Gamma3          0.079  0.046  0.090 -0.443 -0.349 -0.185  0.885  1.000 
+omega3         -0.052 -0.028 -0.041  0.119  0.122  0.042  0.389  0.309  1.000 
+A4             -0.066 -0.044 -0.038  0.159  0.127  0.070 -0.732 -0.569 -0.413  1.000 
+Gamma4         -0.062 -0.040 -0.030  0.118  0.097  0.053 -0.666 -0.485 -0.384  0.934  1.000 
+omega4         -0.011 -0.006  0.009 -0.064 -0.045 -0.026  0.036  0.086  0.047  0.378  0.367  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:43:30 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-0.5)/pi*(atan(x)+pi/2)+0.5
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 5.7112737248e+02   0.00e+00  1.57e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  23 3.0347974537e+02  -7.29e-01  1.57e-09    1.849555e+05   8.801475e+04   1.525725e-01   1.810623e+05   9.393211e-01  -7.889484e-01   3.271344e+05   8.926786e+04  -2.859373e-01   1.610672e+05   5.231182e-01   3.762155e-01
+
+After 23 iterations the fit converged.
+final sum of squares of residuals : 303.48
+rel. change during last iteration : -7.29107e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.86394
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.20216
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 184956           +/- 3.71e+11     (2.006e+08%)
+Gamma1          = 88014.8          +/- 5.328e+10    (6.054e+07%)
+omega1          = 0.152572         +/- 0.3285       (215.3%)
+A2              = 181062           +/- 7.007e+11    (3.87e+08%)
+Gamma2          = 0.939321         +/- 23.5         (2502%)
+omega2          = -0.788948        +/- 0.8617       (109.2%)
+A3              = 327134           +/- 7.369e+11    (2.253e+08%)
+Gamma3          = 89267.9          +/- 4.654e+10    (5.214e+07%)
+omega3          = -0.285937        +/- 0.3354       (117.3%)
+A4              = 161067           +/- 6.673e+10    (4.143e+07%)
+Gamma4          = 0.523118         +/- 2.285        (436.8%)
+omega4          = 0.376216         +/- 0.1962       (52.15%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.905  1.000 
+omega1          0.900  0.832  1.000 
+A2             -0.885 -0.712 -0.763  1.000 
+Gamma2         -0.844 -0.643 -0.685  0.974  1.000 
+omega2          0.649  0.600  0.668 -0.318 -0.283  1.000 
+A3              0.482  0.319  0.396 -0.792 -0.755 -0.118  1.000 
+Gamma3          0.316  0.188  0.271 -0.642 -0.586 -0.197  0.947  1.000 
+omega3         -0.499 -0.358 -0.385  0.704  0.695  0.066 -0.537 -0.430  1.000 
+A4             -0.154 -0.088 -0.136  0.373  0.326  0.163 -0.745 -0.751  0.064  1.000 
+Gamma4         -0.102 -0.061 -0.089  0.243  0.210  0.105 -0.550 -0.528 -0.029  0.870  1.000 
+omega4          0.099  0.050  0.091 -0.249 -0.219 -0.101  0.498  0.504 -0.001 -0.430 -0.328  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:43:59 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (2.0-1.5)/pi*(atan(x)+pi/2)+1.5
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 6.5743109239e+02   0.00e+00  1.18e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  38 3.1538335303e+02  -1.34e-01  1.18e-10   -5.120248e-01   5.498093e+05  -6.588343e+05   6.195207e+05   7.685854e-02  -1.747585e+00   8.374932e+05   4.438688e+05  -5.981803e-01   9.803588e+05   6.062861e-01   2.579201e-01
+
+After 38 iterations the fit converged.
+final sum of squares of residuals : 315.383
+rel. change during last iteration : -1.34086e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.91957
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.52387
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = -0.512025        +/- 1.829        (357.3%)
+Gamma1          = 549809           +/- 1.857e+12    (3.378e+08%)
+omega1          = -658834          +/- 6.993e+11    (1.061e+08%)
+A2              = 619521           +/- 1.918e+12    (3.096e+08%)
+Gamma2          = 0.0768585        +/- 2.813        (3660%)
+omega2          = -1.74758         +/- 0.7168       (41.01%)
+A3              = 837493           +/- 2.658e+12    (3.174e+08%)
+Gamma3          = 443869           +/- 8.064e+11    (1.817e+08%)
+omega3          = -0.59818         +/- 0.2707       (45.26%)
+A4              = 980359           +/- 2.03e+12     (2.071e+08%)
+Gamma4          = 0.606286         +/- 2.293        (378.3%)
+omega4          = 0.25792          +/- 0.1722       (66.75%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.786  1.000 
+omega1          0.427  0.331  1.000 
+A2             -0.207 -0.196 -0.181  1.000 
+Gamma2         -0.296 -0.234 -0.218  0.884  1.000 
+omega2          0.105  0.074  0.036  0.577  0.479  1.000 
+A3             -0.076 -0.017  0.026 -0.798 -0.614 -0.504  1.000 
+Gamma3         -0.127 -0.047 -0.003 -0.730 -0.518 -0.441  0.942  1.000 
+omega3         -0.082 -0.065 -0.069  0.488  0.431  0.398 -0.122 -0.109  1.000 
+A4              0.070  0.022  0.004  0.429  0.294  0.256 -0.753 -0.688 -0.171  1.000 
+Gamma4          0.037  0.011  0.002  0.276  0.187  0.165 -0.571 -0.484 -0.192  0.855  1.000 
+omega4         -0.059 -0.024 -0.007 -0.254 -0.173 -0.144  0.439  0.408  0.139 -0.262 -0.192  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:44:46 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (2.0-0.5)/pi*(atan(x)+pi/2)+0.5
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 6.4161575228e+02   0.00e+00  1.45e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  47 7.1278333435e+01  -1.41e-01  1.45e-10    2.792432e+05   4.232717e+05  -4.880350e+01   5.390331e+05   5.254304e-02  -1.754350e+00   7.173393e+05   3.511180e+05  -5.825329e-01   8.403177e+05   5.813252e-01   2.683521e-01
+
+After 47 iterations the fit converged.
+final sum of squares of residuals : 71.2783
+rel. change during last iteration : -1.41185e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.38796
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.92644
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 279243           +/- 2.391e+11    (8.563e+07%)
+Gamma1          = 423272           +/- 2.045e+11    (4.831e+07%)
+omega1          = -48.8035         +/- 2090         (4282%)
+A2              = 539033           +/- 6.411e+11    (1.189e+08%)
+Gamma2          = 0.052543         +/- 1.233        (2347%)
+omega2          = -1.75435         +/- 0.3295       (18.78%)
+A3              = 717339           +/- 8.998e+11    (1.254e+08%)
+Gamma3          = 351118           +/- 2.353e+11    (6.7e+07%)
+omega3          = -0.582533        +/- 0.1244       (21.35%)
+A4              = 840318           +/- 6.998e+11    (8.328e+07%)
+Gamma4          = 0.581325         +/- 1.051        (180.9%)
+omega4          = 0.268352         +/- 0.0811       (30.22%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1         -0.473  1.000 
+omega1         -0.991  0.561  1.000 
+A2             -0.105  0.034  0.105  1.000 
+Gamma2         -0.151  0.018  0.143  0.876  1.000 
+omega2          0.063  0.010 -0.056  0.588  0.499  1.000 
+A3             -0.080 -0.030  0.066 -0.804 -0.625 -0.489  1.000 
+Gamma3         -0.098 -0.035  0.082 -0.747 -0.543 -0.428  0.941  1.000 
+omega3         -0.035  0.006  0.033  0.454  0.401  0.377 -0.082 -0.079  1.000 
+A4              0.039  0.022 -0.031  0.436  0.307  0.246 -0.751 -0.681 -0.194  1.000 
+Gamma4          0.021  0.012 -0.017  0.279  0.194  0.159 -0.571 -0.480 -0.208  0.854  1.000 
+omega4         -0.040 -0.014  0.034 -0.257 -0.181 -0.136  0.433  0.399  0.151 -0.252 -0.186  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:46:24 2022
+
+
+FIT:    data read from input_file u 1:3
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_i(x)
+	fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x)
+	Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+	Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 5.9204305257e+02   0.00e+00  1.26e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  33 3.0347924550e+02  -1.05e-01  1.26e-10    5.270231e+05   2.967411e+05  -1.294915e+00   5.371847e+05   9.418179e-01  -7.892354e-01   7.061408e+05   4.770972e+05  -2.863237e-01   8.676902e+05   5.252996e-01   3.759467e-01
+
+After 33 iterations the fit converged.
+final sum of squares of residuals : 303.479
+rel. change during last iteration : -1.05413e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.86394
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.20214
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 527023           +/- 3.019e+12    (5.729e+08%)
+Gamma1          = 296741           +/- 6.073e+11    (2.046e+08%)
+omega1          = -1.29492         +/- 1.506        (116.3%)
+A2              = 537185           +/- 6.183e+12    (1.151e+09%)
+Gamma2          = 0.941818         +/- 23.61        (2507%)
+omega2          = -0.789235        +/- 0.8634       (109.4%)
+A3              = 706141           +/- 3.439e+12    (4.87e+08%)
+Gamma3          = 477097           +/- 1.33e+12     (2.789e+08%)
+omega3          = -0.286324        +/- 0.3358       (117.3%)
+A4              = 867690           +/- 1.938e+12    (2.234e+08%)
+Gamma4          = 0.5253           +/- 2.292        (436.4%)
+omega4          = 0.375947         +/- 0.1965       (52.26%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.906  1.000 
+omega1          0.900  0.833  1.000 
+A2             -0.885 -0.713 -0.763  1.000 
+Gamma2         -0.844 -0.644 -0.686  0.975  1.000 
+omega2          0.649  0.601  0.669 -0.318 -0.283  1.000 
+A3              0.482  0.319  0.396 -0.792 -0.756 -0.118  1.000 
+Gamma3          0.317  0.189  0.271 -0.642 -0.586 -0.197  0.947  1.000 
+omega3         -0.499 -0.359 -0.385  0.704  0.696  0.066 -0.538 -0.430  1.000 
+A4             -0.154 -0.088 -0.136  0.373  0.326  0.163 -0.745 -0.751  0.065  1.000 
+Gamma4         -0.102 -0.061 -0.089  0.243  0.210  0.105 -0.550 -0.528 -0.029  0.870  1.000 
+omega4          0.099  0.051  0.092 -0.249 -0.219 -0.101  0.498  0.504 -0.001 -0.430 -0.329  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:47:03 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 3.4735228474e+03   0.00e+00  1.24e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  10 3.1651134061e+03  -4.47e-01  1.24e+00    1.201631e+01   1.227137e+01  -1.323855e+00   2.305992e+00   9.535337e-01  -5.759686e-01  -6.558342e+00   1.278134e+01  -1.388272e+00  -2.883396e+01  -6.720163e+00  -6.245800e-01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 3165.11
+rel. change during last iteration : -4.47472e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 9.24898
+variance of residuals (reduced chisquare) = WSSR/ndf   : 85.5436
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 12.0163          +/- 1.567e+04    (1.304e+05%)
+Gamma1          = 12.2714          +/- 8054         (6.563e+04%)
+omega1          = -1.32385         +/- 7.598        (573.9%)
+A2              = 2.30599          +/- 2503         (1.085e+05%)
+Gamma2          = 0.953534         +/- 198          (2.076e+04%)
+omega2          = -0.575969        +/- 7.728        (1342%)
+A3              = -6.55834         +/- 5304         (8.087e+04%)
+Gamma3          = 12.7813          +/- 5.613e+04    (4.392e+05%)
+omega3          = -1.38827         +/- 511.7        (3.686e+04%)
+A4              = -28.834          +/- 2524         (8753%)
+Gamma4          = -6.72016         +/- 1405         (2.09e+04%)
+omega4          = -0.62458         +/- 1.692        (270.9%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.977  1.000 
+omega1          0.895  0.894  1.000 
+A2             -0.531 -0.456 -0.296  1.000 
+Gamma2         -0.388 -0.325 -0.175  0.965  1.000 
+omega2          0.244  0.202 -0.024 -0.883 -0.902  1.000 
+A3              0.301  0.218  0.078 -0.965 -0.959  0.903  1.000 
+Gamma3         -0.444 -0.433 -0.097  0.651  0.619 -0.772 -0.558  1.000 
+omega3          0.820  0.741  0.621 -0.903 -0.787  0.655  0.780 -0.574  1.000 
+A4             -0.394 -0.319 -0.388  0.308  0.117 -0.091 -0.287 -0.096 -0.497  1.000 
+Gamma4         -0.332 -0.267 -0.330  0.244  0.073 -0.069 -0.229 -0.097 -0.415  0.934  1.000 
+omega4          0.150  0.127  0.171  0.032  0.147 -0.094 -0.048  0.116  0.110 -0.533 -0.611  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:48:02 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        dielectric_co
+   0 6.6648771333e+02   0.00e+00  3.02e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e+00
+  24 3.0007805482e+01  -6.89e-01  3.02e-10    4.482399e+05   4.900170e+05  -1.285257e+00   5.634151e+05   9.820224e-01  -7.533088e-01   1.102065e+01   5.778246e+05  -2.564899e-01   2.768734e+05   6.436593e-01   2.856653e-01   3.652276e+00
+
+After 24 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -6.89124e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.91299
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 448240           +/- 6.645e+11    (1.483e+08%)
+Gamma1          = 490017           +/- 5.277e+11    (1.077e+08%)
+omega1          = -1.28526         +/- 0.459        (35.71%)
+A2              = 563415           +/- 2.155e+12    (3.825e+08%)
+Gamma2          = 0.982022         +/- 7.942        (808.8%)
+omega2          = -0.753309        +/- 0.2644       (35.1%)
+A3              = 11.0206          +/- 318.1        (2886%)
+Gamma3          = 577825           +/- 7.49e+11     (1.296e+08%)
+omega3          = -0.25649         +/- 0.1067       (41.61%)
+A4              = 276873           +/- 9.457e+10    (3.416e+07%)
+Gamma4          = 0.643659         +/- 1.096        (170.3%)
+omega4          = 0.285665         +/- 0.07202      (25.21%)
+dielectric_cons = 3.65228          +/- 0.1845       (5.051%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 dielec 
+A1              1.000 
+Gamma1          0.903  1.000 
+omega1          0.900  0.827  1.000 
+A2             -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.847 -0.643 -0.708  0.975  1.000 
+omega2          0.622  0.576  0.633 -0.272 -0.262  1.000 
+A3              0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.324  0.201  0.293 -0.662 -0.594 -0.224  0.961  1.000 
+omega3         -0.467 -0.343 -0.369  0.613  0.614  0.039 -0.314 -0.244  1.000 
+A4             -0.156 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.104 -0.059 -0.099  0.260  0.222  0.117 -0.595 -0.544 -0.180  0.914  1.000 
+omega4          0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+dielectric_cons 0.031  0.022  0.030 -0.072 -0.060 -0.023  0.201  0.167  0.125 -0.548 -0.560 -0.021  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:48:28 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        dielectric_co
+   0 6.4754215729e+02   0.00e+00  3.08e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e+00
+  58 3.0007814943e+01  -4.64e-01  3.08e-10    2.901548e+05   4.467705e+05  -8.298045e-02   2.863947e+05   9.815332e-01  -7.533953e-01   1.102037e+01   2.528273e+05  -2.565503e-01   2.735968e+05   6.435320e-01   2.856453e-01   3.652298e+00
+
+After 58 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.63575e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.91299
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 290155           +/- 2.785e+11    (9.597e+07%)
+Gamma1          = 446771           +/- 4.384e+11    (9.813e+07%)
+omega1          = -0.0829804       +/- 0.1161       (139.9%)
+A2              = 286395           +/- 5.569e+11    (1.945e+08%)
+Gamma2          = 0.981533         +/- 7.938        (808.7%)
+omega2          = -0.753395        +/- 0.2644       (35.1%)
+A3              = 11.0204          +/- 318.1        (2886%)
+Gamma3          = 252827           +/- 1.434e+11    (5.671e+07%)
+omega3          = -0.25655         +/- 0.1067       (41.6%)
+A4              = 273597           +/- 9.233e+10    (3.375e+07%)
+Gamma4          = 0.643532         +/- 1.096        (170.3%)
+omega4          = 0.285645         +/- 0.07201      (25.21%)
+dielectric_cons = 3.6523           +/- 0.1845       (5.051%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 dielec 
+A1              1.000 
+Gamma1          0.903  1.000 
+omega1          0.900  0.827  1.000 
+A2             -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.847 -0.643 -0.708  0.975  1.000 
+omega2          0.622  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.324  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3         -0.468 -0.343 -0.369  0.613  0.614  0.039 -0.314 -0.244  1.000 
+A4             -0.156 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.104 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.180  0.914  1.000 
+omega4          0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+dielectric_cons 0.031  0.022  0.030 -0.072 -0.060 -0.023  0.200  0.167  0.125 -0.548 -0.560 -0.021  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:49:59 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        dielectric_co
+   0 6.4754215729e+02   0.00e+00  3.08e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e+00
+  58 3.0007814943e+01  -4.64e-01  3.08e-10    2.901548e+05   4.467705e+05  -8.298045e-02   2.863947e+05   9.815332e-01  -7.533953e-01   1.102037e+01   2.528273e+05  -2.565503e-01   2.735968e+05   6.435320e-01   2.856453e-01   3.652298e+00
+
+After 58 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.63575e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.91299
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 290155           +/- 2.785e+11    (9.597e+07%)
+Gamma1          = 446771           +/- 4.384e+11    (9.813e+07%)
+omega1          = -0.0829804       +/- 0.1161       (139.9%)
+A2              = 286395           +/- 5.569e+11    (1.945e+08%)
+Gamma2          = 0.981533         +/- 7.938        (808.7%)
+omega2          = -0.753395        +/- 0.2644       (35.1%)
+A3              = 11.0204          +/- 318.1        (2886%)
+Gamma3          = 252827           +/- 1.434e+11    (5.671e+07%)
+omega3          = -0.25655         +/- 0.1067       (41.6%)
+A4              = 273597           +/- 9.233e+10    (3.375e+07%)
+Gamma4          = 0.643532         +/- 1.096        (170.3%)
+omega4          = 0.285645         +/- 0.07201      (25.21%)
+dielectric_cons = 3.6523           +/- 0.1845       (5.051%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 dielec 
+A1              1.000 
+Gamma1          0.903  1.000 
+omega1          0.900  0.827  1.000 
+A2             -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.847 -0.643 -0.708  0.975  1.000 
+omega2          0.622  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.324  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3         -0.468 -0.343 -0.369  0.613  0.614  0.039 -0.314 -0.244  1.000 
+A4             -0.156 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.104 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.180  0.914  1.000 
+omega4          0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+dielectric_cons 0.031  0.022  0.030 -0.072 -0.060 -0.023  0.200  0.167  0.125 -0.548 -0.560 -0.021  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:51:21 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        dielectric_co
+   0 1.3337795703e+03   0.00e+00  5.46e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e+00
+  22 3.0007785097e+01  -4.89e-01  5.46e-11    1.493795e+06   4.557855e+05  -8.297180e-02   5.631318e+05   9.807754e-01  -7.533026e-01   1.105215e+01   2.720738e+06  -2.564125e-01   2.925845e+06   6.441128e-01   2.857122e-01  -7.061256e-01
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.88518e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.912989
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 1.49379e+06      +/- 7.376e+12    (4.938e+08%)
+Gamma1          = 455785           +/- 4.561e+11    (1.001e+08%)
+omega1          = -0.0829718       +/- 0.1161       (139.9%)
+A2              = 563132           +/- 2.152e+12    (3.821e+08%)
+Gamma2          = 0.980775         +/- 7.926        (808.2%)
+omega2          = -0.753303        +/- 0.2642       (35.08%)
+A3              = 11.0522          +/- 319.8        (2894%)
+Gamma3          = 2.72074e+06      +/- 1.66e+13     (6.102e+08%)
+omega3          = -0.256412        +/- 0.1067       (41.6%)
+A4              = 2.92584e+06      +/- 1.056e+13    (3.61e+08%)
+Gamma4          = 0.644113         +/- 1.097        (170.3%)
+omega4          = 0.285712         +/- 0.07204      (25.22%)
+dielectric_cons = -0.706126        +/- 0.07242      (10.26%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 dielec 
+A1              1.000 
+Gamma1          0.903  1.000 
+omega1          0.900  0.827  1.000 
+A2             -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.847 -0.642 -0.708  0.975  1.000 
+omega2          0.622  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.324  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3         -0.467 -0.343 -0.369  0.613  0.613  0.039 -0.313 -0.243  1.000 
+A4             -0.155 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.104 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.181  0.914  1.000 
+omega4          0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+dielectric_cons 0.031  0.022  0.030 -0.072 -0.060 -0.023  0.201  0.167  0.125 -0.549 -0.560 -0.021  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:52:46 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        dielectric_co A5            Gamma5        omega5       
+   0 1.3337795703e+03   0.00e+00  4.92e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Mon Jul  4 14:53:03 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        dielectric_co A5            Gamma5        omega5       
+   0 1.3337795703e+03   0.00e+00  4.92e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Mon Jul  4 14:53:29 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            dielectric_co Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        A5            Gamma5        omega5       
+   0 1.3337795703e+03   0.00e+00  4.92e-01    1.000000e-01   1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Mon Jul  4 14:54:13 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x) + Lorentz5_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz5_r_restr(x) = P5(A5) * (F5(omega5)**2 - x**2) / ((F5(omega5)**2 - x**2)**2  + (x*H5(Gamma5))**2)
+	P5(x) = (35.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F5(x) = (12.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H5(x) = (3.0-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            dielectric_co Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4        A5            Gamma5        omega5       
+   0 1.6161733588e+03   0.00e+00  4.93e-01    1.000000e-01   1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  40 3.0009745720e+01  -5.57e-01  4.93e-10    1.695221e+05  -7.064192e-01   2.443135e+05  -8.298432e-02   1.921954e+05   9.811666e-01  -7.533942e-01   1.104649e+01   1.856510e+05  -2.565225e-01   1.998406e+05   6.434588e-01   2.856643e-01  -6.978526e+04   5.993069e+03   1.452649e+04
+
+After 40 iterations the fit converged.
+final sum of squares of residuals : 30.0097
+rel. change during last iteration : -5.56787e-06
+
+degrees of freedom    (FIT_NDF)                        : 33
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.953617
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.909386
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 169522           +/- 1.132e+11    (6.679e+07%)
+dielectric_cons = -0.706419        +/- 211.3        (2.992e+04%)
+Gamma1          = 244314           +/- 1.654e+11    (6.768e+07%)
+omega1          = -0.0829843       +/- 0.1235       (148.8%)
+A2              = 192195           +/- 2.676e+11    (1.392e+08%)
+Gamma2          = 0.981167         +/- 8.39         (855.1%)
+omega2          = -0.753394        +/- 0.2823       (37.47%)
+A3              = 11.0465          +/- 380.6        (3446%)
+Gamma3          = 185651           +/- 8.665e+10    (4.667e+07%)
+omega3          = -0.256522        +/- 0.1125       (43.87%)
+A4              = 199841           +/- 1.981e+11    (9.912e+07%)
+Gamma4          = 0.643459         +/- 2.663        (413.8%)
+omega4          = 0.285664         +/- 0.1038       (36.33%)
+A5              = -69785.3         +/- 7.766e+13    (1.113e+11%)
+Gamma5          = 5993.07          +/- 1.693e+14    (2.825e+12%)
+omega5          = 14526.5          +/- 3.949e+14    (2.718e+12%)
+
+correlation matrix of the fit parameters:
+                A1     dielec Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 A5     Gamma5 omega5 
+A1              1.000 
+dielectric_cons-0.115  1.000 
+Gamma1          0.925 -0.131  1.000 
+omega1          0.864 -0.059  0.775  1.000 
+A2             -0.810  0.147 -0.632 -0.766  1.000 
+Gamma2         -0.775  0.107 -0.572 -0.708  0.975  1.000 
+omega2          0.623  0.017  0.572  0.640 -0.268 -0.258  1.000 
+A3              0.547  0.021  0.444  0.420 -0.725 -0.674 -0.066  1.000 
+Gamma3          0.402 -0.108  0.309  0.328 -0.668 -0.596 -0.168  0.945  1.000 
+omega3         -0.398 -0.011 -0.275 -0.351  0.576  0.585  0.031 -0.236 -0.189  1.000 
+A4             -0.022  0.872  0.008 -0.057  0.242  0.195  0.129 -0.127 -0.284 -0.084  1.000 
+Gamma4         -0.048  0.775 -0.018 -0.071  0.256  0.207  0.125 -0.229 -0.351 -0.142  0.964  1.000 
+omega4          0.061  0.625  0.029  0.061 -0.106 -0.105 -0.042  0.383  0.302  0.044  0.573  0.506  1.000 
+A5              0.102 -1.000  0.115  0.054 -0.144 -0.105 -0.022 -0.034  0.100  0.010 -0.877 -0.777 -0.627  1.000 
+Gamma5         -0.059  0.992 -0.067 -0.037  0.130  0.094  0.036  0.080 -0.066 -0.003  0.878  0.769  0.621 -0.995  1.000 
+omega5          0.092 -0.999  0.105  0.050 -0.142 -0.103 -0.025 -0.043  0.093  0.009 -0.880 -0.778 -0.627  1.000 -0.997  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 14:54:44 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            dielectric_co Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3337795703e+03   0.00e+00  5.46e-01    1.000000e-01   1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  22 3.0007785096e+01  -4.89e-01  5.46e-11    1.493840e+06  -7.061256e-01   4.557865e+05  -8.297180e-02   5.631415e+05   9.807754e-01  -7.533026e-01   1.105215e+01   2.720735e+06  -2.564125e-01   2.925841e+06   6.441128e-01   2.857122e-01
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.88518e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.912989
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = 1.49384e+06      +/- 7.376e+12    (4.938e+08%)
+dielectric_cons = -0.706126        +/- 0.07242      (10.26%)
+Gamma1          = 455787           +/- 4.561e+11    (1.001e+08%)
+omega1          = -0.0829718       +/- 0.1161       (139.9%)
+A2              = 563142           +/- 2.152e+12    (3.821e+08%)
+Gamma2          = 0.980775         +/- 7.926        (808.2%)
+omega2          = -0.753303        +/- 0.2642       (35.08%)
+A3              = 11.0522          +/- 319.8        (2894%)
+Gamma3          = 2.72074e+06      +/- 1.66e+13     (6.102e+08%)
+omega3          = -0.256412        +/- 0.1067       (41.6%)
+A4              = 2.92584e+06      +/- 1.056e+13    (3.61e+08%)
+Gamma4          = 0.644113         +/- 1.097        (170.3%)
+omega4          = 0.285712         +/- 0.07204      (25.22%)
+
+correlation matrix of the fit parameters:
+                A1     dielec Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+dielectric_cons 0.031  1.000 
+Gamma1          0.903  0.022  1.000 
+omega1          0.900  0.030  0.827  1.000 
+A2             -0.875 -0.072 -0.700 -0.768  1.000 
+Gamma2         -0.847 -0.060 -0.642 -0.708  0.975  1.000 
+omega2          0.622 -0.023  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.456  0.201  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.324  0.167  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3         -0.467  0.125 -0.343 -0.369  0.613  0.613  0.039 -0.313 -0.243  1.000 
+A4             -0.155 -0.549 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.104 -0.560 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.181  0.914  1.000 
+omega4          0.127 -0.021  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+
+
+*******************************************************************************
+Mon Jul  4 15:02:48 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   dielectric_co A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3337795703e+03   0.00e+00  5.46e-01    1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  22 3.0007785097e+01  -4.89e-01  5.46e-11   -7.061256e-01   1.493831e+06   4.557845e+05  -8.297180e-02   5.631349e+05   9.807754e-01  -7.533026e-01   1.105215e+01   2.720743e+06  -2.564125e-01   2.925845e+06   6.441128e-01   2.857122e-01
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.88518e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.912989
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+dielectric_cons = -0.706126        +/- 0.07242      (10.26%)
+A1              = 1.49383e+06      +/- 7.376e+12    (4.938e+08%)
+Gamma1          = 455785           +/- 4.561e+11    (1.001e+08%)
+omega1          = -0.0829718       +/- 0.1161       (139.9%)
+A2              = 563135           +/- 2.152e+12    (3.821e+08%)
+Gamma2          = 0.980775         +/- 7.926        (808.2%)
+omega2          = -0.753303        +/- 0.2642       (35.08%)
+A3              = 11.0522          +/- 319.8        (2894%)
+Gamma3          = 2.72074e+06      +/- 1.66e+13     (6.102e+08%)
+omega3          = -0.256412        +/- 0.1067       (41.6%)
+A4              = 2.92584e+06      +/- 1.056e+13    (3.61e+08%)
+Gamma4          = 0.644113         +/- 1.097        (170.3%)
+omega4          = 0.285712         +/- 0.07204      (25.22%)
+
+correlation matrix of the fit parameters:
+                dielec A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+dielectric_cons 1.000 
+A1              0.031  1.000 
+Gamma1          0.022  0.903  1.000 
+omega1          0.030  0.900  0.827  1.000 
+A2             -0.072 -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.060 -0.847 -0.642 -0.708  0.975  1.000 
+omega2         -0.023  0.622  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.201  0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.167  0.324  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3          0.125 -0.467 -0.343 -0.369  0.613  0.613  0.039 -0.313 -0.243  1.000 
+A4             -0.549 -0.155 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.560 -0.104 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.181  0.914  1.000 
+omega4         -0.021  0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+
+
+*******************************************************************************
+Tue Jul  5 11:10:12 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   dielectric_co A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3337795703e+03   0.00e+00  5.46e-01    1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  22 3.0007785097e+01  -4.89e-01  5.46e-11   -7.061256e-01   1.493831e+06   4.557845e+05  -8.297180e-02   5.631349e+05   9.807754e-01  -7.533026e-01   1.105215e+01   2.720743e+06  -2.564125e-01   2.925845e+06   6.441128e-01   2.857122e-01
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.88518e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.912989
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+dielectric_cons = -0.706126        +/- 0.07242      (10.26%)
+A1              = 1.49383e+06      +/- 7.376e+12    (4.938e+08%)
+Gamma1          = 455785           +/- 4.561e+11    (1.001e+08%)
+omega1          = -0.0829718       +/- 0.1161       (139.9%)
+A2              = 563135           +/- 2.152e+12    (3.821e+08%)
+Gamma2          = 0.980775         +/- 7.926        (808.2%)
+omega2          = -0.753303        +/- 0.2642       (35.08%)
+A3              = 11.0522          +/- 319.8        (2894%)
+Gamma3          = 2.72074e+06      +/- 1.66e+13     (6.102e+08%)
+omega3          = -0.256412        +/- 0.1067       (41.6%)
+A4              = 2.92584e+06      +/- 1.056e+13    (3.61e+08%)
+Gamma4          = 0.644113         +/- 1.097        (170.3%)
+omega4          = 0.285712         +/- 0.07204      (25.22%)
+
+correlation matrix of the fit parameters:
+                dielec A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+dielectric_cons 1.000 
+A1              0.031  1.000 
+Gamma1          0.022  0.903  1.000 
+omega1          0.030  0.900  0.827  1.000 
+A2             -0.072 -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.060 -0.847 -0.642 -0.708  0.975  1.000 
+omega2         -0.023  0.622  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.201  0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.167  0.324  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3          0.125 -0.467 -0.343 -0.369  0.613  0.613  0.039 -0.313 -0.243  1.000 
+A4             -0.549 -0.155 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.560 -0.104 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.181  0.914  1.000 
+omega4         -0.021  0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+
+
+*******************************************************************************
+Tue Jul  5 11:10:35 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   dielectric_co A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3337795703e+03   0.00e+00  5.46e-01    1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  22 3.0007785097e+01  -4.89e-01  5.46e-11   -7.061256e-01   1.493831e+06   4.557845e+05  -8.297180e-02   5.631349e+05   9.807754e-01  -7.533026e-01   1.105215e+01   2.720743e+06  -2.564125e-01   2.925845e+06   6.441128e-01   2.857122e-01
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.88518e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.912989
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+dielectric_cons = -0.706126        +/- 0.07242      (10.26%)
+A1              = 1.49383e+06      +/- 7.376e+12    (4.938e+08%)
+Gamma1          = 455785           +/- 4.561e+11    (1.001e+08%)
+omega1          = -0.0829718       +/- 0.1161       (139.9%)
+A2              = 563135           +/- 2.152e+12    (3.821e+08%)
+Gamma2          = 0.980775         +/- 7.926        (808.2%)
+omega2          = -0.753303        +/- 0.2642       (35.08%)
+A3              = 11.0522          +/- 319.8        (2894%)
+Gamma3          = 2.72074e+06      +/- 1.66e+13     (6.102e+08%)
+omega3          = -0.256412        +/- 0.1067       (41.6%)
+A4              = 2.92584e+06      +/- 1.056e+13    (3.61e+08%)
+Gamma4          = 0.644113         +/- 1.097        (170.3%)
+omega4          = 0.285712         +/- 0.07204      (25.22%)
+
+correlation matrix of the fit parameters:
+                dielec A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+dielectric_cons 1.000 
+A1              0.031  1.000 
+Gamma1          0.022  0.903  1.000 
+omega1          0.030  0.900  0.827  1.000 
+A2             -0.072 -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.060 -0.847 -0.642 -0.708  0.975  1.000 
+omega2         -0.023  0.622  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.201  0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.167  0.324  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3          0.125 -0.467 -0.343 -0.369  0.613  0.613  0.039 -0.313 -0.243  1.000 
+A4             -0.549 -0.155 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.560 -0.104 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.181  0.914  1.000 
+omega4         -0.021  0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+
+
+*******************************************************************************
+Thu Jul  7 11:31:05 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (fix_omega**2 - x**2) / ((fix_omega**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   dielectric_co A1            Gamma1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3718637379e+03   0.00e+00  5.63e-01    1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  35 3.8986860739e+01  -8.14e-01  5.63e-11   -6.660768e-01  -1.713638e+00   4.217242e+05   7.252442e+05   2.224405e-01  -1.671308e+00   7.813817e+05   1.772482e+06  -5.503120e-01   3.548162e+06   6.607535e-01   1.872345e-01
+
+After 35 iterations the fit converged.
+final sum of squares of residuals : 38.9869
+rel. change during last iteration : -8.14075e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.0265
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.0537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+dielectric_cons = -0.666077        +/- 0.07372      (11.07%)
+A1              = -1.71364         +/- 4.487        (261.9%)
+Gamma1          = 421724           +/- 1.152e+12    (2.732e+08%)
+A2              = 725244           +/- 1.35e+12     (1.861e+08%)
+Gamma2          = 0.222441         +/- 1.613        (724.9%)
+omega2          = -1.67131         +/- 0.2823       (16.89%)
+A3              = 781382           +/- 9.993e+11    (1.279e+08%)
+Gamma3          = 1.77248e+06      +/- 5.143e+12    (2.902e+08%)
+omega3          = -0.550312        +/- 0.09984      (18.14%)
+A4              = 3.54816e+06      +/- 1.303e+13    (3.671e+08%)
+Gamma4          = 0.660753         +/- 1.065        (161.2%)
+omega4          = 0.187234         +/- 0.06442      (34.41%)
+
+correlation matrix of the fit parameters:
+                dielec A1     Gamma1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+dielectric_cons 1.000 
+A1              0.011  1.000 
+Gamma1          0.008  0.633  1.000 
+A2             -0.059 -0.576 -0.067  1.000 
+Gamma2         -0.039 -0.541  0.019  0.938  1.000 
+omega2         -0.036  0.246  0.083  0.277  0.220  1.000 
+A3              0.184  0.109 -0.145 -0.734 -0.624 -0.435  1.000 
+Gamma3          0.143  0.036 -0.145 -0.656 -0.525 -0.421  0.950  1.000 
+omega3          0.139 -0.210  0.021  0.450  0.436  0.255 -0.042 -0.033  1.000 
+A4             -0.544  0.006  0.089  0.363  0.279  0.243 -0.742 -0.675 -0.263  1.000 
+Gamma4         -0.516  0.001  0.058  0.249  0.190  0.165 -0.593 -0.503 -0.273  0.905  1.000 
+omega4         -0.110 -0.001 -0.057 -0.248 -0.190 -0.163  0.491  0.462  0.194 -0.250 -0.186  1.000 
+
+
+*******************************************************************************
+Sat Jul  9 18:17:50 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (fix_omega**2 - x**2) / ((fix_omega**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   dielectric_co A1            Gamma1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3718637379e+03   0.00e+00  5.63e-01    1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  35 3.8986860739e+01  -8.14e-01  5.63e-11   -6.660768e-01  -1.713638e+00   4.217242e+05   7.252442e+05   2.224405e-01  -1.671308e+00   7.813817e+05   1.772482e+06  -5.503120e-01   3.548162e+06   6.607535e-01   1.872345e-01
+
+After 35 iterations the fit converged.
+final sum of squares of residuals : 38.9869
+rel. change during last iteration : -8.14075e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.0265
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.0537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+dielectric_cons = -0.666077        +/- 0.07372      (11.07%)
+A1              = -1.71364         +/- 4.487        (261.9%)
+Gamma1          = 421724           +/- 1.152e+12    (2.732e+08%)
+A2              = 725244           +/- 1.35e+12     (1.861e+08%)
+Gamma2          = 0.222441         +/- 1.613        (724.9%)
+omega2          = -1.67131         +/- 0.2823       (16.89%)
+A3              = 781382           +/- 9.993e+11    (1.279e+08%)
+Gamma3          = 1.77248e+06      +/- 5.143e+12    (2.902e+08%)
+omega3          = -0.550312        +/- 0.09984      (18.14%)
+A4              = 3.54816e+06      +/- 1.303e+13    (3.671e+08%)
+Gamma4          = 0.660753         +/- 1.065        (161.2%)
+omega4          = 0.187234         +/- 0.06442      (34.41%)
+
+correlation matrix of the fit parameters:
+                dielec A1     Gamma1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+dielectric_cons 1.000 
+A1              0.011  1.000 
+Gamma1          0.008  0.633  1.000 
+A2             -0.059 -0.576 -0.067  1.000 
+Gamma2         -0.039 -0.541  0.019  0.938  1.000 
+omega2         -0.036  0.246  0.083  0.277  0.220  1.000 
+A3              0.184  0.109 -0.145 -0.734 -0.624 -0.435  1.000 
+Gamma3          0.143  0.036 -0.145 -0.656 -0.525 -0.421  0.950  1.000 
+omega3          0.139 -0.210  0.021  0.450  0.436  0.255 -0.042 -0.033  1.000 
+A4             -0.544  0.006  0.089  0.363  0.279  0.243 -0.742 -0.675 -0.263  1.000 
+Gamma4         -0.516  0.001  0.058  0.249  0.190  0.165 -0.593 -0.503 -0.273  0.905  1.000 
+omega4         -0.110 -0.001 -0.057 -0.248 -0.190 -0.163  0.491  0.462  0.194 -0.250 -0.186  1.000 
+
+
+*******************************************************************************
+Sat Jul  9 18:19:14 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   dielectric_co A1            Gamma1        omega1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3337795703e+03   0.00e+00  5.46e-01    1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  22 3.0007785097e+01  -4.89e-01  5.46e-11   -7.061256e-01   1.493831e+06   4.557845e+05  -8.297180e-02   5.631349e+05   9.807754e-01  -7.533026e-01   1.105215e+01   2.720743e+06  -2.564125e-01   2.925845e+06   6.441128e-01   2.857122e-01
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 30.0078
+rel. change during last iteration : -4.88518e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.912989
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.83355
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+dielectric_cons = -0.706126        +/- 0.07242      (10.26%)
+A1              = 1.49383e+06      +/- 7.376e+12    (4.938e+08%)
+Gamma1          = 455785           +/- 4.561e+11    (1.001e+08%)
+omega1          = -0.0829718       +/- 0.1161       (139.9%)
+A2              = 563135           +/- 2.152e+12    (3.821e+08%)
+Gamma2          = 0.980775         +/- 7.926        (808.2%)
+omega2          = -0.753303        +/- 0.2642       (35.08%)
+A3              = 11.0522          +/- 319.8        (2894%)
+Gamma3          = 2.72074e+06      +/- 1.66e+13     (6.102e+08%)
+omega3          = -0.256412        +/- 0.1067       (41.6%)
+A4              = 2.92584e+06      +/- 1.056e+13    (3.61e+08%)
+Gamma4          = 0.644113         +/- 1.097        (170.3%)
+omega4          = 0.285712         +/- 0.07204      (25.22%)
+
+correlation matrix of the fit parameters:
+                dielec A1     Gamma1 omega1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+dielectric_cons 1.000 
+A1              0.031  1.000 
+Gamma1          0.022  0.903  1.000 
+omega1          0.030  0.900  0.827  1.000 
+A2             -0.072 -0.875 -0.700 -0.768  1.000 
+Gamma2         -0.060 -0.847 -0.642 -0.708  0.975  1.000 
+omega2         -0.023  0.622  0.576  0.633 -0.272 -0.263  1.000 
+A3              0.201  0.456  0.303  0.394 -0.776 -0.725 -0.158  1.000 
+Gamma3          0.167  0.324  0.201  0.293 -0.662 -0.594 -0.223  0.961  1.000 
+omega3          0.125 -0.467 -0.343 -0.369  0.613  0.613  0.039 -0.313 -0.243  1.000 
+A4             -0.549 -0.155 -0.087 -0.150  0.386  0.333  0.173 -0.769 -0.744 -0.123  1.000 
+Gamma4         -0.560 -0.104 -0.059 -0.100  0.260  0.222  0.117 -0.595 -0.544 -0.181  0.914  1.000 
+omega4         -0.021  0.127  0.073  0.121 -0.308 -0.265 -0.130  0.600  0.591  0.120 -0.471 -0.361  1.000 
+
+
+*******************************************************************************
+Mon Aug  8 19:47:54 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+	Lorentz1_r_restr(x) = P1(A1) * (fix_omega**2 - x**2) / ((fix_omega**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   dielectric_co A1            Gamma1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 1.3718637379e+03   0.00e+00  5.63e-01    1.000000e+00   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  35 3.8986860739e+01  -8.14e-01  5.63e-11   -6.660768e-01  -1.713638e+00   4.217242e+05   7.252442e+05   2.224405e-01  -1.671308e+00   7.813817e+05   1.772482e+06  -5.503120e-01   3.548162e+06   6.607535e-01   1.872345e-01
+
+After 35 iterations the fit converged.
+final sum of squares of residuals : 38.9869
+rel. change during last iteration : -8.14075e-06
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.0265
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.0537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+dielectric_cons = -0.666077        +/- 0.07372      (11.07%)
+A1              = -1.71364         +/- 4.487        (261.9%)
+Gamma1          = 421724           +/- 1.152e+12    (2.732e+08%)
+A2              = 725244           +/- 1.35e+12     (1.861e+08%)
+Gamma2          = 0.222441         +/- 1.613        (724.9%)
+omega2          = -1.67131         +/- 0.2823       (16.89%)
+A3              = 781382           +/- 9.993e+11    (1.279e+08%)
+Gamma3          = 1.77248e+06      +/- 5.143e+12    (2.902e+08%)
+omega3          = -0.550312        +/- 0.09984      (18.14%)
+A4              = 3.54816e+06      +/- 1.303e+13    (3.671e+08%)
+Gamma4          = 0.660753         +/- 1.065        (161.2%)
+omega4          = 0.187234         +/- 0.06442      (34.41%)
+
+correlation matrix of the fit parameters:
+                dielec A1     Gamma1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+dielectric_cons 1.000 
+A1              0.011  1.000 
+Gamma1          0.008  0.633  1.000 
+A2             -0.059 -0.576 -0.067  1.000 
+Gamma2         -0.039 -0.541  0.019  0.938  1.000 
+omega2         -0.036  0.246  0.083  0.277  0.220  1.000 
+A3              0.184  0.109 -0.145 -0.734 -0.624 -0.435  1.000 
+Gamma3          0.143  0.036 -0.145 -0.656 -0.525 -0.421  0.950  1.000 
+omega3          0.139 -0.210  0.021  0.450  0.436  0.255 -0.042 -0.033  1.000 
+A4             -0.544  0.006  0.089  0.363  0.279  0.243 -0.742 -0.675 -0.263  1.000 
+Gamma4         -0.516  0.001  0.058  0.249  0.190  0.165 -0.593 -0.503 -0.273  0.905  1.000 
+omega4         -0.110 -0.001 -0.057 -0.248 -0.190 -0.163  0.491  0.462  0.194 -0.250 -0.186  1.000 
+
+
+*******************************************************************************
+Mon Aug  8 19:54:25 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  fix_dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	Lorentz1_r_restr(x) = P1(A1) * (fix_omega**2 - x**2) / ((fix_omega**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 2.2986446690e+02   0.00e+00  1.21e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  24 3.9496993336e+01  -4.08e-01  1.21e-10   -1.515720e+00   2.625231e+05   4.512438e+05   2.151309e-01  -1.641986e+00   7.709933e+05   5.236454e+05  -5.381247e-01   8.635100e+05   6.487581e-01   1.934097e-01
+
+After 24 iterations the fit converged.
+final sum of squares of residuals : 39.497
+rel. change during last iteration : -4.07982e-06
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.01951
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.03939
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = -1.51572         +/- 3.664        (241.8%)
+Gamma1          = 262523           +/- 4.056e+11    (1.545e+08%)
+A2              = 451244           +/- 5.039e+11    (1.117e+08%)
+Gamma2          = 0.215131         +/- 1.554        (722.5%)
+omega2          = -1.64199         +/- 0.2712       (16.51%)
+A3              = 770993           +/- 9.415e+11    (1.221e+08%)
+Gamma3          = 523645           +/- 4.395e+11    (8.392e+07%)
+omega3          = -0.538125        +/- 0.0968       (17.99%)
+A4              = 863510           +/- 6.419e+11    (7.434e+07%)
+Gamma4          = 0.648758         +/- 0.8924       (137.6%)
+omega4          = 0.19341          +/- 0.06342      (32.79%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.648  1.000 
+A2             -0.564 -0.077  1.000 
+Gamma2         -0.527  0.011  0.936  1.000 
+omega2          0.243  0.093  0.290  0.233  1.000 
+A3              0.096 -0.144 -0.734 -0.622 -0.442  1.000 
+Gamma3          0.025 -0.143 -0.655 -0.522 -0.425  0.949  1.000 
+omega3         -0.203  0.017  0.451  0.435  0.263 -0.052 -0.040  1.000 
+A4              0.020  0.108  0.394  0.305  0.268 -0.779 -0.718 -0.237  1.000 
+Gamma4          0.012  0.070  0.254  0.196  0.173 -0.593 -0.506 -0.245  0.868  1.000 
+omega4         -0.003 -0.055 -0.255 -0.193 -0.168  0.523  0.484  0.220 -0.370 -0.283  1.000 
+
+
+*******************************************************************************
+Mon Aug  8 19:55:17 2022
+
+
+FIT:    data read from input_file u 1:2
+        format = x:z
+        #datapoints = 49
+        residuals are weighted equally (unit weight)
+
+function used for fitting: fit_eps_r(x)
+	fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x)
+	Drude_r_restr(x) =  fix_dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+	Lorentz1_r_restr(x) = P1(A1) * (fix_omega**2 - x**2) / ((fix_omega**2 - x**2)**2  + (x*H1(Gamma1))**2)
+	P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+	P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+	P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+	P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1
+	F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+	H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A1            Gamma1        A2            Gamma2        omega2        A3            Gamma3        omega3        A4            Gamma4        omega4       
+   0 2.2986446690e+02   0.00e+00  1.21e-01    1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01   1.000000e-01
+  24 3.9496993336e+01  -4.08e-01  1.21e-10   -1.515720e+00   2.625231e+05   4.512438e+05   2.151309e-01  -1.641986e+00   7.709933e+05   5.236454e+05  -5.381247e-01   8.635100e+05   6.487581e-01   1.934097e-01
+
+After 24 iterations the fit converged.
+final sum of squares of residuals : 39.497
+rel. change during last iteration : -4.07982e-06
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.01951
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.03939
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A1              = -1.51572         +/- 3.664        (241.8%)
+Gamma1          = 262523           +/- 4.056e+11    (1.545e+08%)
+A2              = 451244           +/- 5.039e+11    (1.117e+08%)
+Gamma2          = 0.215131         +/- 1.554        (722.5%)
+omega2          = -1.64199         +/- 0.2712       (16.51%)
+A3              = 770993           +/- 9.415e+11    (1.221e+08%)
+Gamma3          = 523645           +/- 4.395e+11    (8.392e+07%)
+omega3          = -0.538125        +/- 0.0968       (17.99%)
+A4              = 863510           +/- 6.419e+11    (7.434e+07%)
+Gamma4          = 0.648758         +/- 0.8924       (137.6%)
+omega4          = 0.19341          +/- 0.06342      (32.79%)
+
+correlation matrix of the fit parameters:
+                A1     Gamma1 A2     Gamma2 omega2 A3     Gamma3 omega3 A4     Gamma4 omega4 
+A1              1.000 
+Gamma1          0.648  1.000 
+A2             -0.564 -0.077  1.000 
+Gamma2         -0.527  0.011  0.936  1.000 
+omega2          0.243  0.093  0.290  0.233  1.000 
+A3              0.096 -0.144 -0.734 -0.622 -0.442  1.000 
+Gamma3          0.025 -0.143 -0.655 -0.522 -0.425  0.949  1.000 
+omega3         -0.203  0.017  0.451  0.435  0.263 -0.052 -0.040  1.000 
+A4              0.020  0.108  0.394  0.305  0.268 -0.779 -0.718 -0.237  1.000 
+Gamma4          0.012  0.070  0.254  0.196  0.173 -0.593 -0.506 -0.245  0.868  1.000 
+omega4         -0.003 -0.055 -0.255 -0.193 -0.168  0.523  0.484  0.220 -0.370 -0.283  1.000 

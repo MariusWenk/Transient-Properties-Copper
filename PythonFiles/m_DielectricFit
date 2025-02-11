@@ -1,0 +1,154 @@
+# constant params
+hbar_eV = 6.5821195146e-16
+plasma_freq = 10.80976588 # Calculated value
+f_0 = 0.671
+collision_freq = hbar_eV/11.9e-15 
+#dielectric_const = 12.294
+
+input_file = 'data/JC_300K_CU_epsilon.OUT'
+output_file = 'data/Fitplot_Cu'
+
+
+# Make a guess for
+
+A1  = 0.1
+Gamma1  = 0.1
+omega1 = 0.1
+
+A2 = 0.1
+Gamma2 = 0.1
+omega2 = 0.1
+
+A3 = 0.1
+Gamma3  = 0.1
+omega3 = 0.1
+
+A4 = 0.1
+Gamma4  = 0.1
+omega4 = 0.1
+
+A5 = 0.1
+Gamma5  = 0.1
+omega5 = 0.1
+
+dielectric_const = 0.1
+
+#Define a new function to restrict the fiting parameters 
+N(x) = (1-0.01)/pi*(atan(x)+pi/2)+0.01		 
+
+H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 0.5]
+H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 0.8]
+H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 1.0]
+H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 1.8]
+H5(x) = (3.0-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 3.0]
+
+
+P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1	#range [0.1, 5]
+P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1	
+P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1	
+P5(x) = (35.0-0.1)/pi*(atan(x)+pi/2)+0.1	
+
+#P2(x) =  P1(x)					 
+#P3(x) =  P1(x)					 
+#P4(x) =  P1(x)					 
+#P5(x) =  P1(x)
+
+		 
+F1(x) = (4.0-1.0)/pi*(atan(x)+pi/2)+1.0
+F2(x) = (5.0-2.0)/pi*(atan(x)+pi/2)+2.0
+F3(x) = (6.0-2.0)/pi*(atan(x)+pi/2)+2.0
+F4(x) = (7.0-2.0)/pi*(atan(x)+pi/2)+2.0
+F5(x) = (12.0-2.0)/pi*(atan(x)+pi/2)+2.0
+
+
+R(x) = (12-0.001)/pi*(atan(x)+pi/2)+0.001
+
+
+fix_dielectric_const = 3.65223607643857
+Drude_i_restr(x) = (f_0 * plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+#Drude_r_restr(x) =  R(dielectric_const)  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+Drude_r_restr(x) =  fix_dielectric_const  - (f_0 * plasma_freq**2 / (x**2 + collision_freq**2))
+
+
+
+fix_omega = 2.1
+Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((F1(omega1)**2 - x**2)**2 + (x*H1(Gamma1))**2)
+#Lorentz1_r_restr(x) = P1(A1) * (F1(omega1)**2 - x**2) / ((F1(omega1)**2 - x**2)**2  + (x*H1(Gamma1))**2)
+Lorentz1_r_restr(x) = P1(A1) * (fix_omega**2 - x**2) / ((fix_omega**2 - x**2)**2  + (x*H1(Gamma1))**2)
+
+
+Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((F2(omega2)**2 - x**2)**2 + (x*H2(Gamma2))**2)
+Lorentz2_r_restr(x) = P2(A2) * (F2(omega2)**2 - x**2) / ((F2(omega2)**2 - x**2)**2  + (x*H2(Gamma2))**2)
+
+
+Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((F3(omega3)**2 - x**2)**2 + (x*H3(Gamma3))**2)
+Lorentz3_r_restr(x) = P3(A3) * (F3(omega3)**2 - x**2) / ((F3(omega3)**2 - x**2)**2  + (x*H3(Gamma3))**2)
+
+
+Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((F4(omega4)**2 - x**2)**2 + (x*H4(Gamma4))**2)
+Lorentz4_r_restr(x) = P4(A4) * (F4(omega4)**2 - x**2) / ((F4(omega4)**2 - x**2)**2  + (x*H4(Gamma4))**2)
+
+Lorentz5_i_restr(x) = P5(A5) * H5(Gamma5) * x / ((F5(omega5)**2 - x**2)**2 + (x*H5(Gamma5))**2)
+Lorentz5_r_restr(x) = P5(A5) * (F5(omega5)**2 - x**2) / ((F5(omega5)**2 - x**2)**2  + (x*H5(Gamma5))**2)
+
+
+fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x) # + Lorentz5_i_restr(x)
+fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x) # + Lorentz5_r_restr(x)
+
+ 
+
+ 
+#fit  fit_eps_i(x) input_file u 1:3  via A1, Gamma1, omega1, A2, Gamma2, omega2, A3, Gamma3, omega3, A4, Gamma4, omega4 # , A5, Gamma5, omega5
+#fit  fit_eps_i(x) input_file u 1:3  via A1, Gamma1, A2, Gamma2, A3, Gamma3, A4, Gamma4, A5, Gamma5, collision_freq
+#fit  fit_eps_r(x) input_file u 1:2 via dielectric_const, A1, Gamma1, omega1, A2, Gamma2, omega2, A3, Gamma3, omega3, A4, Gamma4, omega4#, A5, Gamma5, omega5
+fit  fit_eps_r(x) input_file u 1:2 via A1, Gamma1, A2, Gamma2, omega2, A3, Gamma3, omega3, A4, Gamma4, omega4#, A5, Gamma5, omega5
+ 
+
+
+set term pdfcairo
+set output (output_file)
+set xr[0.5:6.5]
+set xl 'Energy [eV]'
+set yr[-30:30]
+set yl 'epsilon' 
+plot input_file u 1:3 t 'exp.' , fit_eps_i(x) lw 2 t 'fit' , input_file u 1:2 t 'exp.', fit_eps_r(x) t 'fit'
+ 
+ 
+print "------------------------------------------------------"
+print "-------------------Interband lifetime ---------------"
+print "\nH1(Gamma1)= ", H1(Gamma1) 
+print "\nH2(Gamma2)= ", H2(Gamma2) 
+print "\nH3(Gamma3)= ", H3(Gamma3) 
+print "\nH4(Gamma4)= ", H4(Gamma4)
+print "------------------------------------------------------"
+print  "-----------------Oscillator strengths----------------"
+print "\nP1(A1)= ", P1(A1)
+print "\nP2(A2)= ", P2(A2)
+print "\nP3(A3)= ", P3(A3)
+print "\nP4(A4)= ", P4(A4)
+print "------------------------------------------------------"
+print  "-----------------Resonance frequencies---------------"
+print "\nF1(omega1)= ", F1(omega1)
+print "\nF2(omega2)= ", F2(omega2)
+print "\nF3(omega3)= ", F3(omega3)
+print "\nF4(omega4)= ", F4(omega4)
+print "------------------------------------------------------"
+print "\ncollision freq= ", 1.0/(collision_freq/hbar_eV), " s"
+print "\nR(dielectric const)= ", R(dielectric_const)
+print "\nFit done \n"
+print "----------------Presentation for code-----------------"
+print "\neq_strength: ",P1(A1),",",P2(A2),",",P3(A3),",",P4(A4)
+print "\nomega: ",F1(omega1),",",F2(omega2),",",F3(omega3),",",F4(omega4)
+print "\ngamma: ",H1(Gamma1),",",H2(Gamma2),",",H3(Gamma3),",",H4(Gamma4)
+
+ 
+ 
+
+
+
+
+
+
+
+ 

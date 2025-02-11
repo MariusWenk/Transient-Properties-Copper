@@ -1,0 +1,7 @@
+DOS file = input/DOS_Cu/DOS_easy_Cu.in
+e-ph coupling = input/coupling_Cu/Lin_coupling_Cu_au.in
+pulse duration = 50 fs FWHM
+max peak of laser at 0 fs
+absorbed energy  = 0.604 MJ/kg
+pump photon energy = 3.09949 eV Or Wavelength = 400 nm implies d-band absorption ratio (300K) = 0.814456
+relaxation time = 258 fs

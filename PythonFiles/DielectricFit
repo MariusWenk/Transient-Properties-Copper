@@ -1,0 +1,138 @@
+
+# constant params
+hbar_eV = 6.5821195146e-16
+plasma_freq = 9.029435870035748 # Calculated value
+collision_freq = hbar_eV/11.9e-15 
+dielectric_const = 3.104
+
+input_file = 'data/JC_300K_Au.OUT'
+output_file = 'data/Fitplot_Au'
+
+
+#Treshold frequency of interband transitions
+
+omega1 = 2.784	# Value from Rodriguez---can be fitted as well
+omega2 = 3.183
+omega3 = 3.799
+omega4 = 4.695
+omega5 = 6.349
+
+# Make a guess for
+
+A1  = 0.1
+Gamma1  = 0.1
+
+A2 = 0.1
+Gamma2 = 0.1
+
+A3 = 0.1
+Gamma3  = 0.1
+
+A4 = 0.1
+Gamma4  = 0.1
+
+A5 = 0.1
+Gamma5  = 0.1
+
+#Define a new function to restrict the fiting parameters 
+N(x) = (1-0.01)/pi*(atan(x)+pi/2)+0.01		 
+
+H1(x) = (0.5-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 0.5]
+H2(x) = (0.8-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 0.8]
+H3(x) = (1.0-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 1.0]
+H4(x) = (1.8-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 1.8]
+H5(x) = (3.0-0.1)/pi*(atan(x)+pi/2)+0.1		#range [0.1, 3.0]
+
+
+
+P1(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1	#range [0.1, 5]
+P2(x) = (5.0-0.1)/pi*(atan(x)+pi/2)+0.1	
+P3(x) = (15.0-0.1)/pi*(atan(x)+pi/2)+0.1
+P4(x) = (25.0-0.1)/pi*(atan(x)+pi/2)+0.1	
+P5(x) = (35.0-0.1)/pi*(atan(x)+pi/2)+0.1	
+
+#P2(x) =  P1(x)					 
+#P3(x) =  P1(x)					 
+#P4(x) =  P1(x)					 
+#P5(x) =  P1(x)					 
+
+
+
+R(x) = (5-0.001)/pi*(atan(x)+pi/2)+0.001
+
+
+
+Drude_i_restr(x) = (plasma_freq**2 * collision_freq) / (x*(x**2+collision_freq**2))
+Drude_r_restr(x) =  dielectric_const  - (plasma_freq**2 / (x**2 + collision_freq**2))
+
+
+
+Lorentz1_i_restr(x) = P1(A1) * H1(Gamma1) * x / ((omega1**2 - x**2)**2 + (x*H1(Gamma1))**2)
+Lorentz1_r_restr(x) = P1(A1) * (omega1**2 - x**2) / ((omega1**2 - x**2)**2  + (x*H1(Gamma1))**2)
+
+
+Lorentz2_i_restr(x) = P2(A2) * H2(Gamma2) * x / ((omega2**2 - x**2)**2 + (x*H2(Gamma2))**2)
+Lorentz2_r_restr(x) = P2(A2) * (omega2**2 - x**2) / ((omega2**2 - x**2)**2  + (x*H2(Gamma2))**2)
+
+
+Lorentz3_i_restr(x) = P3(A3) * H3(Gamma3) * x / ((omega3**2 - x**2)**2 + (x*H3(Gamma3))**2)
+Lorentz3_r_restr(x) = P3(A3) * (omega3**2 - x**2) / ((omega3**2 - x**2)**2  + (x*H3(Gamma3))**2)
+
+
+Lorentz4_i_restr(x) = P4(A4) * H4(Gamma4) * x / ((omega4**2 - x**2)**2 + (x*H4(Gamma4))**2)
+Lorentz4_r_restr(x) = P4(A4) * (omega4**2 - x**2) / ((omega4**2 - x**2)**2  + (x*H4(Gamma4))**2)
+
+
+Lorentz5_i_restr(x) = P5(A5) * H5(Gamma5) * x / ((omega5**2 - x**2)**2 + (x*H5(Gamma5))**2)
+Lorentz5_r_restr(x) = P5(A5) * (omega5**2 - x**2) / ((omega5**2 - x**2)**2  + (x*H5(Gamma5))**2)
+
+
+fit_eps_i(x) =  Drude_i_restr(x) + Lorentz1_i_restr(x)+ Lorentz2_i_restr(x) + Lorentz3_i_restr(x) + Lorentz4_i_restr(x) + Lorentz5_i_restr(x)
+fit_eps_r(x) =  Drude_r_restr(x) + Lorentz1_r_restr(x)+ Lorentz2_r_restr(x) + Lorentz3_r_restr(x) + Lorentz4_r_restr(x) + Lorentz5_r_restr(x)
+
+ 
+
+ 
+fit  fit_eps_i(x) input_file u 1:3  via A1, Gamma1, A2, Gamma2, A3, Gamma3, A4, Gamma4, A5, Gamma5
+#fit  fit_eps_i(x) input_file u 1:3  via A1, Gamma1, A2, Gamma2, A3, Gamma3, A4, Gamma4, A5, Gamma5, collision_freq
+#fit  fit_eps_r(x) input_file u 1:2 via A1, Gamma1, A2, Gamma2, A3, Gamma3, A4, Gamma4, A5, Gamma5
+ 
+
+
+set term pdfcairo
+set output (output_file)
+set xr[0.5:6.5]
+set xl 'Energy [eV]'
+set yr[-30:30]
+set yl 'epsilon' 
+plot input_file u 1:3 t 'exp.' , fit_eps_i(x) lw 2 t 'fit' , input_file u 1:2 t 'exp.', fit_eps_r(x) t 'fit'
+ 
+ 
+print "------------------------------------------------------"
+print "-------------------Interband lifetime ---------------"
+print "\nH1(Gamma1)= ", H1(Gamma1) 
+print "\nH2(Gamma2)= ", H2(Gamma2) 
+print "\nH3(Gamma3)= ", H3(Gamma3) 
+print "\nH4(Gamma4)= ", H4(Gamma4) 
+print "\nH5(Gamma5)= ", H5(Gamma5) 
+print "------------------------------------------------------"
+print  "-----------------Oscillator strengths----------------"
+print "\nP1(A1)= ", P1(A1)
+print "\nP2(A2)= ", P2(A2)
+print "\nP3(A3)= ", P3(A3)
+print "\nP4(A4)= ", P4(A4)
+print "\nP5(A5)= ", P5(A5)
+print "------------------------------------------------------"
+print "\ncollision freq= ", 1.0/(collision_freq/hbar_eV), " s"
+print "\nFit done \n"
+
+ 
+ 
+
+
+
+
+
+
+
+ 
