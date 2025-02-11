@@ -17,12 +17,12 @@
 ## Python Code
 Python scripts in PythonFiles can be used to format some of the input and output data.
 
-Run from terminal with: python3 *`Filename`*.py
+Run: $ python3 *`Filename`*.py
 
 
 ### Author 
 This project is based on work of Pascal D. Ndione for the two-temperature model in gold. This version was created by Marius Wenk.
-Python Files with m_*`name`*.py are created by Marius Wenk, the remaining ones by Pascal Ndione.
+Python Files with m_*`Filename`*.py are created by Marius Wenk, the remaining ones by Pascal Ndione.
 
 ### Contributors
 AG Rethfeld - TU Kaiserslautern (RPTU)
