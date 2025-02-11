@@ -29,6 +29,5 @@ AG Rethfeld - TU Kaiserslautern (RPTU)
 
 ### Contact
 - [Marius_Wenk@gmx.de](Marius_Wenk@gmx.de)
-- [ndione@physik.uni-kl.de](ndione@physik.uni-kl.de)
 - [pndione@protonmail.com](pndione@protonmail.com)
 
