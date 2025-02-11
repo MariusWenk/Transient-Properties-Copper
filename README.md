@@ -1,5 +1,6 @@
 # Density Function (DF) Program
 
+This program is part of the result of my bachelor thesis in physics at TU Kaiserslautern and based on a program by my supervisor Pascal D. Ndione.
 
 ## Required libraries
 * [GSL](https://www.gnu.org/software/gsl/doc/html/)
