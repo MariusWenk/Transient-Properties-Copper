@@ -1,4 +1,4 @@
-# DF_Program
+# Density Function (DF) Program
 
 
 ## Required libraries
