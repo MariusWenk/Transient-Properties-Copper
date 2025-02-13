@@ -1,6 +1,6 @@
 # Density Function (DF) Program
 
-This program is part of the result of my bachelor thesis in physics at TU Kaiserslautern and based on a program by my supervisor Pascal D. Ndione.
+This program is part of the result of my [bachelor's thesis](https://mariuswenk.github.io/assets/pdf/BSc_thesis.pdf) in physics at TU Kaiserslautern "Transient optical response and density-evolution of valence electrons in copper after ultrafast laser-excitation". It is based on a program by my supervisor Pascal D. Ndione.
 
 ## Required libraries
 * [GSL](https://www.gnu.org/software/gsl/doc/html/)
